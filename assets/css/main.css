@@ -1815,7 +1815,7 @@
 		border-radius: 4px;
 		margin-bottom: 2em;
 		overflow: hidden;
-		padding: 4em;
+		padding: 3em;
 	}
 
 		.box > :last-child,
@@ -1843,7 +1843,7 @@
 		@media screen and (max-width: 980px) {
 
 			.box {
-				padding: 3em;
+				padding: 2em;
 			}
 
 		}
@@ -1851,7 +1851,7 @@
 		@media screen and (max-width: 736px) {
 
 			.box {
-				padding: 2em;
+				padding: 1em;
 			}
 
 		}
@@ -1859,7 +1859,7 @@
 		@media screen and (max-width: 480px) {
 
 			.box {
-				padding: 1em;
+				padding: 0.5em;
 			}
 
 		}
@@ -1949,18 +1949,6 @@
 			-ms-pointer-events: none;
 			pointer-events: none;
 			opacity: 0.25;
-		}
-
-		@media screen and (max-width: 480px) {
-
-			input[type="submit"],
-			input[type="reset"],
-			input[type="button"],
-			button,
-			.button {
-				padding: 0;
-			}
-
 		}
 
 	input[type="submit"],
@@ -2730,7 +2718,6 @@
 
 	header h2 + p {
 		font-size: 1.25em;
-		margin-top: -1em;
 	}
 
 	header h3 + p {
@@ -3764,10 +3751,6 @@
 				font-size: .85em;
 			}
 
-				#banner br {
-					display: none;
-				}
-
 		}
 
 		@media screen and (max-width: 736px) {
@@ -3786,12 +3769,20 @@
 
 		@media screen and (max-width: 480px) {
 
+			#banner {
+				padding: 8em 0.5em 4em 0.5em;
+			}
+
 			#banner h1 {
-				font-size: 4em;
+				font-size: 3em;
 			}
 
 			#banner .more {
 				display: none;
+			}
+
+			#banner p {
+				font-size: 1.25em;
 			}
 
 		}

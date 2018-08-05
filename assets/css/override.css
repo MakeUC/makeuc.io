@@ -16,3 +16,7 @@ table td {
     font-weight: 600;
     font-size: 100%;
 }
+
+ul {
+    text-align: left;
+}
