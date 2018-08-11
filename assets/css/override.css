@@ -20,3 +20,39 @@ table td {
 ul {
     text-align: left;
 }
+
+.button-push-down {
+    padding-top: 2px;
+}
+
+.content p {
+    font-size: 1.25em;
+}
+
+#footer {
+    background: none;
+    background-color: #aa2527;
+}
+
+.footer-subheader {
+    text-transform: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#one {
+    background-image: url(/images/laptop.jpg)
+}
+
+#two {
+    background-image: url(/images/spindle.jpg)
+}
+
+#three {
+    background-image: url(/images/hacking.jpg)
+}
+
+#four {
+    background-image: url(/images/UC.jpg)
+}
