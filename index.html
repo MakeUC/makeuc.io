@@ -13,7 +13,16 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="logo"><a href="index.html">MakeUC <span>2018</span></a></div>
-				<a href="#menu"><span>Menu</span></a>
+				<a href="#menu" class="menu-button"><span>Menu</span></a>
+				<nav id="large-menu">
+					<div class="large-menu-container">
+						<a href="index.html">Home</a>
+						<a href="#about">About</a>
+						<a href="#schedule">Schedule</a>
+						<a href="#location">Location</a>
+						<a href="#faq">FAQ</a>
+					</div>
+				</nav>
 			</header>
 
 		<!-- Nav -->
@@ -39,8 +48,17 @@
 						<h1>MakeUC</h1>
 						<p>Saturday, September 29, 2018.<br>
 							12-hour University of Cincinnati hack day.<br>
-							Hosted by <a href="https://acmatuc.org">ACM@UC</a> and <a href="http://www.ieee.uc.edu/">IEEE</a>.</p>
-						<a href="#" class="button alt button-push-down">Sign Up</a>
+							Hosted by <a href="https://acmatuc.org">ACM@UC</a> and <a href="http://www.ieee.uc.edu/">IEEE</a>.
+						</p>
+						<div class="horiz-flex">
+							<a href="https://acmatuc.org">
+								<img src="images/acmatuc-logo.svg" class="exec-logo"/>
+							</a>
+							<a href="http://ieee.uc.edu">
+								<img src="images/ieee-logo.png" class="exec-logo"/>
+							</a>
+						</div>
+						<a href="https://goo.gl/forms/hriJGCDLpXdVI3Zl1" class="button alt button-push-down">Sign Up</a>
 					</header>
 				</div>
 				<a href="#one" class="more">Learn More</a>
@@ -93,15 +111,15 @@
 							<h2>Schedule</h2>
 							<p>Saturday, September 29</p>
 						</header>
-						<div class="content">
+						<div class="content" style="font-size: 125%">
 							<table>
 								<tr>
-									<td class="time">8 AM</td>
-									<td>Check-in Begins</td>
+									<td class="time"><strong>8:30 AM</strong></td>
+									<td><strong>Check-in Begins, Breakfast</strong></td>
 								</tr>
 								<tr>
 									<td class="time">9 AM</td>
-									<td>Introduction, Breakfast</td>
+									<td>Introduction</td>
 								</tr>
 								<tr>
 									<td class="time"><strong>9:30 AM</strong></td>
@@ -120,15 +138,15 @@
 									<td>Lunch</td>
 								</tr>
 								<tr>
-									<td class="time">5 PM</td>
+									<td class="time">6 PM</td>
 									<td>Dinner</td>
 								</tr>
 								<tr>
-									<td class="time">7 PM</td>
-									<td>Judging Begins</td>
+									<td class="time"><strong>8 PM</strong></td>
+									<td><strong>Hacking Ends, Judging Begins</strong></td>
 								</tr>
 								<tr>
-									<td class="time">8 PM</td>
+									<td class="time">9 PM</td>
 									<td>Awards, Closing Ceremony</td>
 								</tr>
 							</table>
@@ -144,6 +162,7 @@
 					<article class="box">
 						<header>
 							<h2>Location</h2>
+							<h3>755 Baldwin Hall, University of Cincinnati</h3>
 						</header>
 						<div class="content">
 							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3094.8405373231353!2d-84.5188797!3d39.13286!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b38c775fcf85%3A0x28f006bad9418b72!2sBaldwin+Hall%2C+Cincinnati%2C+OH+45219!5e0!3m2!1sen!2sus!4v1533484174556" width="100%" height="500" frameborder="0" style="border:0"></iframe>
@@ -162,10 +181,31 @@
 							<h2>FAQ</h2>
 						</header>
 						<div class="content">
-							<ul>
-								<li>Will there be hacking? <strong>Yes.</strong></li>
-								<li>How much does it cost? <strong>Nothing! The entire event is free.</strong></li>
-								<li>Will there be memes? <strong>There may be memes, but if you are a discerning memer, make sure to BYOM.</strong></li>
+							<ul class="faq">
+								<li><strong>What is a hackathon?</strong>
+									A hackathon is an event where student hackers 
+									bring their passion for technology to create a 
+									new project coded from scratch. It’s a chance to 
+									collaborate and create something unique in any 
+									number of forms - an app, a robot, a website! 
+									You’ll hopefully learn something new along the 
+									way in our high energy, engaging environment!
+								</li>
+								<li><strong>How much does it cost?</strong>
+									Nothing! The entire event is free for any UC student, 
+									with meals, snacks, and prizes all included.
+								</li>
+								<li><strong>What if I'm new to hackathons?</strong>
+									You’re new to hackathons? Wonderful! MakeUC 
+									is open to all skill levels, beginners to veterans. 
+									There’s nothing we love more than helping our 
+									hackers learn something new while they build 
+									something cool!
+								</li>
+								<li><strong>How do I form teams?</strong>
+									Teams are formed at the event but you're free to 
+									organize before if all participants are registered.
+								</li>
 							</ul>
 						</div>
 					</article>
@@ -176,7 +216,7 @@
 			<footer id="footer">
 				<div class="inner">
 
-					<h2>Sponsors</h2>
+					<!-- <h2>Sponsors</h2>
 
 					<h3 class="footer-subheader">Thank you to the partners of MakeUC!</h3>
 
@@ -185,7 +225,7 @@
 						<li><a href="#" class="icon round fa-facebook"><span class="label">Facebook</span></a></li>
 						<li><a href="#" class="icon round fa-instagram"><span class="label">Instagram</span></a></li>
 						<li><a href="#" class="icon round fa-github"><span class="label">GitHub</span></a></li>
-					</ul>
+					</ul> -->
 
 					<div class="copyright">
 						&copy; MakeUC. Design: <a href="https://templated.co">TEMPLATED</a>.

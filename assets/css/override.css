@@ -56,3 +56,61 @@ ul {
 #four {
     background-image: url(/images/UC.jpg)
 }
+
+header p {
+    margin-bottom: 0.5em;
+}
+
+.horiz-flex {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    margin-bottom: 0.5em;
+}
+
+.horiz-flex .exec-logo {
+    height: 4em;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#large-menu {
+    display: none;
+}
+
+.faq li {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+    .menu-button {
+        display: none !important;
+    }
+    #menu {
+        display: none !important;
+    }
+    #large-menu {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: 0;
+        height: 100%;
+        border-radius: 5px;
+        padding: 0 5px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    #large-menu .large-menu-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+    #large-menu a {
+        display: block;
+        margin: 0 10px;
+        font-size: 110%;
+        color: white;
+    }
+    #large-menu a:hover {
+        text-decoration: underline;
+        color: #F64747;
+    }
+}
