@@ -1,25 +1,30 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Button from '../components/Button';
 import Card from '../components/Card';
+import LabelText from '../components/LabelText';
 import Layout from '../components/layout/Layout';
+import ScrollTopButton from '../components/ScrollTopButton';
+// import StatsBox from '../components/StatsBox';
 import HeroImage from '../svg/HeroImage';
 import Accordion from '../components/Accordion';
 
 export default () => (
   <Layout>
+    <ScrollTopButton />
     <section className="pt-20 md:pt-40">
       <div className="container mx-auto px-8 lg:flex">
         <div className="text-center lg:text-left lg:w-1/2">
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">MakeUC 2020</h1>
           <p className="text-xl lg:text-3xl mt-6 font-light">
-            Discovering the beyond <br />
-            <strong>October 3-4, 2020</strong>
+            Discovering the beyond <br/>
+            <strong>
+              October 3-4, 2020
+            </strong>
           </p>
           <p className="mt-8 md:mt-12">
-            <Link to="/register">
+            <a href="/register">
               <Button size="lg">Register</Button>
-            </Link>
+            </a>
           </p>
         </div>
         <div className="lg:w-1/2">
@@ -31,12 +36,9 @@ export default () => (
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">Schedule</h2>
         <div className="sm:-mx-3 mt-12">
-          <iframe
-            title="schedule"
-            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSl9HPcmstfEHYhgx0RJO4F_jfGLmfnsiSWQRMSasb6oJXbcwk6NsLqzSD-GgtgSd8EP0ILKODmxllC/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"
-            width="100%"
-            height="500px"
-          />
+          <Card>
+            <p className="text-xl">Schedule</p>
+          </Card>
         </div>
       </div>
     </section>
@@ -96,9 +98,9 @@ export default () => (
       </div>
     </section>
     <section id="faq" className="py-20 lg:pb-40 lg:pt-48">
-      <div className="container mx-auto">
-        <h2 className="text-3xl lg:text-5xl font-semibold text-center">FAQ</h2>
-        <div className="sm:-mx-3 mt-12 text-left">
+      <div className="container mx-auto text-left">
+        <h2 className="text-3xl lg:text-5xl font-semibold">FAQ</h2>
+        <div className="sm:-mx-3 mt-12">
           <Card>
             <Accordion
               title="What is a hackathon?"

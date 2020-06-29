@@ -6,11 +6,14 @@ node_js:
 script:
   - npm run build
 
+after_success:
+  - mkdir ./docs
+  - mv ./public/* ./docs/
+
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: ./public
   keep_history: true
   on:
     branch: master
