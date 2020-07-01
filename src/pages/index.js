@@ -65,7 +65,7 @@ export default () => {
             <div className="flex-1 px-3">
               <Card style={{ height: `250px` }} className="bg-white text-black">
                 <h1 className="text-2xl font-semibold">Education</h1>
-                <p className="lg:text-md">
+                <p className="">
                   The Education track aims to improve the accessibility of information and enhance the
                   learning experiences of students at any level. These projects include but are not
                   limited to increasing access to information and technologies related to space
@@ -152,7 +152,7 @@ export default () => {
     </section> */}
     <section id="sponsors" className="py-20 lg:pb-40 lg:pt-48">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl lg:text-5xl font-semibold">SPONSORS</h2>
+        <h2 className="text-3xl lg:text-5xl font-semibold"><u>SPONSORS</u></h2>
         <div className="sm:-mx-3 mt-12 bg-white rounded-lg md:w-50 font-sans text-lg text-white-800 text-center">
           <Card>
             <p className="text-xl bg-white text-black">Interested in sponsoring MakeUC 2020? Reach out to us at:</p>
