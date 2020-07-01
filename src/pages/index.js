@@ -28,7 +28,7 @@ export default () => {
     <section className="pt-20 md:pt-40">
       <div className="container mx-auto px-8 lg:flex">
         <div className="text-center lg:text-left lg:w-1/2">
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">MakeUC 2020</h1>
+          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none font-sans text-lg text-white-800">MakeUC 2020</h1>
           <p className="text-xl lg:text-3xl mt-6 font-light">
             Discovering the beyond <br />
             <strong>October 3-4, 2020</strong>
@@ -63,9 +63,9 @@ export default () => {
         <div className="sm:-mx-3 mt-12">
           <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
             <div className="flex-1 px-3">
-              <Card style={{ height: `250px` }}>
+              <Card style={{ height: `250px` }} className="bg-white text-black">
                 <h1 className="text-2xl font-semibold">Education</h1>
-                <p>
+                <p className="lg:text-md">
                   The Education track aims to improve the accessibility of information and enhance the
                   learning experiences of students at any level. These projects include but are not
                   limited to increasing access to information and technologies related to space
@@ -75,7 +75,7 @@ export default () => {
               </Card>
             </div>
             <div className="flex-1 px-3">
-              <Card style={{ height: `250px` }}>
+              <Card style={{ height: `250px` }} className="bg-white text-black">
                 <h1 className="text-2xl font-semibold">Space Exploration</h1>
                 <p>
                   The Space Exploration track aligns with the main theme of this year’s hackathon.
@@ -87,7 +87,7 @@ export default () => {
           </div>
           <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
             <div className="flex-1 px-3">
-              <Card style={{ height: `250px` }}>
+              <Card style={{ height: `250px` }} className="bg-white text-black">
                 <h1 className="text-2xl font-semibold">Health Technology</h1>
                 <p>
                   The Health Technology track aims to make improvements to a variety of health
@@ -98,7 +98,7 @@ export default () => {
               </Card>
             </div>
             <div className="flex-1 px-3">
-              <Card style={{ height: `250px` }}>
+              <Card style={{ height: `250px` }} className="bg-white text-black">
                 <h1 className="text-2xl font-semibold">Social Responsibility</h1>
                 <p>
                   The Social Responsibility track encompasses technologies concerning social and
@@ -115,7 +115,7 @@ export default () => {
     <section id="faq" className="py-20 lg:pb-40 lg:pt-48">
       <div className="container mx-auto">
         <h2 className="text-3xl lg:text-5xl font-semibold text-center">FAQ</h2>
-        <div className="sm:-mx-3 mt-12 text-left">
+        <div className="sm:-mx-3 mt-12 text-left text-black bg-white font-sans text-lg text-white-800 text-center">
           <Card>
             {data.site.siteMetadata.faq.map(faq =>
               <Accordion
@@ -152,11 +152,11 @@ export default () => {
     </section> */}
     <section id="sponsors" className="py-20 lg:pb-40 lg:pt-48">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl lg:text-5xl font-semibold">SPONSORS!</h2>
-        <div className="sm:-mx-3 mt-12">
+        <h2 className="text-3xl lg:text-5xl font-semibold">SPONSORS</h2>
+        <div className="sm:-mx-3 mt-12 bg-white rounded-lg md:w-50 font-sans text-lg text-white-800 text-center">
           <Card>
-            <p className="text-xl">Interested in sponsoring MakeUC 2020? Reach out to us at:</p>
-            <p className="text-2xl"><a href="mailto:contact@makeuc.io">contact@makeuc.io</a></p>
+            <p className="text-xl bg-white text-black">Interested in sponsoring MakeUC 2020? Reach out to us at:</p>
+            <p className="text-2xl bg-white text-black"><u><a href="mailto:contact@makeuc.io">contact@makeuc.io</a></u></p>
           </Card>
         </div>
       </div>
