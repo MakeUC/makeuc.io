@@ -152,10 +152,11 @@ export default () => {
     </section> */}
     <section id="sponsors" className="py-20 lg:pb-40 lg:pt-48">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl lg:text-5xl font-semibold">Sponsors</h2>
+        <h2 className="text-3xl lg:text-5xl font-semibold">SPONSORS!</h2>
         <div className="sm:-mx-3 mt-12">
           <Card>
-            <p className="text-xl">Sponsors</p>
+            <p className="text-xl">Interested in sponsoring MakeUC 2020? Reach out to us at:</p>
+            <p className="text-2xl"><a href="mailto:contact@makeuc.io">contact@makeuc.io</a></p>
           </Card>
         </div>
       </div>
