@@ -8,6 +8,13 @@ import HeaderImage from "../components/HeaderImage";
 import Accordion from "../components/Accordion";
 import SEO from "../components/SEO";
 
+import AliceCarousel from 'react-alice-carousel';
+import "react-alice-carousel/lib/alice-carousel.css";
+import image1 from '../../images/1.jpg'
+import image2 from '../../images/2.jpg'
+import image3 from '../../images/3.jpg'
+import image4 from '../../images/4.jpg'
+
 // import Schedule from '../components/Schedule';
 // import scheduleData from '../../content/schedule.yaml';
 
@@ -159,6 +166,27 @@ export default () => {
                 ))}
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+      <section id="faq" className="py-10 lg:pb-24 lg:pt-24">
+        <div className="container mx-auto">
+          <h2
+            className="text-3xl lg:text-5xl font-semibold text-center"
+            style={{
+              textDecoration: "underline",
+              textDecorationColor: "#8ae9c1",
+            }}
+          >
+            SPEAKERS
+          </h2>
+          <div className='carousel mt-12'>
+          <AliceCarousel autoPlay autoPlayInterval="3000">
+            <img src={image1} className="sliderimg"/>
+            <img src={image2} className="sliderimg"/>
+            <img src={image3} className="sliderimg"/>
+            <img src={image4} className="sliderimg"/>
+          </AliceCarousel>
           </div>
         </div>
       </section>
