@@ -181,12 +181,20 @@ export default () => {
             SPEAKERS
           </h2>
           <div className='carousel mt-12'>
-          <AliceCarousel autoPlay autoPlayInterval="3000">
-            <img src={image1} className="sliderimg"/>
-            <img src={image2} className="sliderimg"/>
-            <img src={image3} className="sliderimg"/>
-            <img src={image4} className="sliderimg"/>
-          </AliceCarousel>
+          <Card className="m-4 bg-white">
+            <AliceCarousel 
+             autoPlay 
+             autoPlayInterval="3000" 
+             buttonsDisabled="true" 
+             touchTrackingEnabled="true"
+             controlsStrategy="responsive"
+             preventEventOnTouchMove>
+              <img src={image1} className="sliderimg"/>
+              <img src={image2} className="sliderimg"/>
+              <img src={image3} className="sliderimg"/>
+              <img src={image4} className="sliderimg"/>
+            </AliceCarousel>
+          </Card>
           </div>
         </div>
       </section>
