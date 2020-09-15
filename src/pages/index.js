@@ -14,6 +14,7 @@ import image1 from '../../images/1.jpg'
 import image2 from '../../images/2.jpg'
 import image3 from '../../images/3.jpg'
 import image4 from '../../images/4.jpg'
+import image5 from '../../images/5.png'
 
 // import Schedule from '../components/Schedule';
 // import scheduleData from '../../content/schedule.yaml';
@@ -33,6 +34,12 @@ export const query = graphql`
 export default () => {
   const data = useStaticQuery(query);
   const { tracks, faq, sponsors } = data.site.siteMetadata;
+
+  // _onMouseMove = (e) => {
+  //   const width = this.refs.speaker1.clientWidth;
+  //   const height = this.refs.speaker1.clientHeight;
+  //   console.log(width, height);
+  // }
 
   return (
     <Layout>
@@ -181,20 +188,36 @@ export default () => {
             SPEAKERS
           </h2>
           <div className='carousel mt-12'>
-          <Card className="m-4 bg-white">
-            <AliceCarousel 
-             autoPlay 
-             autoPlayInterval="3000" 
-             buttonsDisabled="true" 
-             touchTrackingEnabled="true"
-             controlsStrategy="responsive"
-             preventEventOnTouchMove>
-              <img src={image1} className="sliderimg"/>
-              <img src={image2} className="sliderimg"/>
-              <img src={image3} className="sliderimg"/>
-              <img src={image4} className="sliderimg"/>
-            </AliceCarousel>
-          </Card>
+            <Card className="m-4 bg-white">
+            <div className="grid grid-cols-1 grid-rows-1 lg:grid-cols-1 lg:grid-rows-1">
+                <AliceCarousel 
+                  autoPlay
+                  autoPlayInterval="3000" 
+                  buttonsDisabled="true" 
+                  touchTrackingEnabled="true"
+                  controlsStrategy="responsive"
+                  preventEventOnTouchMove
+                  showSlideInfo="true">
+                    
+                      <div className="speaker1">he
+                        <img src={image5} style={{width:"150px", height:"150px"}} className="sliderimg"/>
+                        <p><h4 className="text-xl lg:text-3xl font-semibold" style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>speaker 1 </h4><br /> <font color="black"> &lt; text &gt; </font></p>
+                      </div>
+                      <div className="speaker2">
+                        <img src={image5} style={{width:"150px", height:"150px"}} className="sliderimg"/>
+                        <p><h4 className="text-xl lg:text-3xl font-semibold" style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>speaker 2 </h4><br /> <font color="black"> &lt; text &gt; </font></p>
+                      </div>
+                      <div className="m-4">
+                        <img src={image5} style={{width:"150px", height:"150px"}} className="sliderimg"/>
+                        <p><h4 className="text-xl lg:text-3xl font-semibold" style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>speaker 3 </h4><br /> <font color="black"> &lt; text &gt; </font></p>
+                      </div>
+                      <div className="m-4">
+                        <img src={image5} style={{width:"150px", height:"150px"}} className="sliderimg"/>
+                        <p><h4 className="text-xl lg:text-3xl font-semibold" style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>speaker 4 </h4><br /> <font color="black"> &lt; text &gt; </font></p>
+                      </div>    
+                </AliceCarousel>
+                </div>
+             </Card>
           </div>
         </div>
       </section>
