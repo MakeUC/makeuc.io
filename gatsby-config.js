@@ -1,3 +1,5 @@
+const { FaMinusCircle } = require("react-icons/fa");
+
 module.exports = {
   siteMetadata: {
     title: `MakeUC 2020`,
@@ -67,6 +69,14 @@ module.exports = {
         question: `WHAT ARE HACKATHON TRACKS?`,
         answer: `We have developed 4 tracks (impact areas) to assist you with building your idea. However, you're not 
         required to submit your hack to a track to win a prize!`
+      }
+    ],
+    speakers: [
+      {
+        src: "miri.png",
+        name: "Miri Rodriguez",
+        info: "Head of Global Internship Program at Microsoft",
+        desc: "Author: Brand Storytelling"
       }
     ],
     sponsors: [

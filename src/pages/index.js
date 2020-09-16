@@ -10,8 +10,6 @@ import SEO from "../components/SEO";
 
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
-import image1 from '../../images/1.png'
-import image5 from '../../images/5.png'
 
 // import Schedule from '../components/Schedule';
 // import scheduleData from '../../content/schedule.yaml';
@@ -22,6 +20,7 @@ export const query = graphql`
       siteMetadata {
         tracks { title content }
         faq { question answer }
+        speakers { src name info desc }
         sponsors { link src imageHeight className alt }
       }
     }
@@ -30,7 +29,7 @@ export const query = graphql`
 
 export default () => {
   const data = useStaticQuery(query);
-  const { tracks, faq, sponsors } = data.site.siteMetadata;
+  const { tracks, faq, speakers, sponsors } = data.site.siteMetadata;
 
   // _onMouseMove = (e) => {
   //   const width = this.refs.speaker1.clientWidth;
@@ -195,67 +194,23 @@ export default () => {
                   controlsStrategy="responsive"
                   preventEventOnTouchMove
                   showSlideInfo="true">
-                    
-                      <div className="speaker1">
-                        <img src={image1} style={{width:"150px", height:"150px"}} className="sliderimg"/>
+                    {speakers.map((speaker) => (
+                      <div key={speaker.name}>
+                        <img src={speaker.src} style={{width:"150px", height:"150px"}} className="sliderimg"/>
                         <p><h4 className="mt-3 text-xl lg:text-3xl font-semibold" 
-                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
-                                 Miri Rodriguez
+                              style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
+                                {speaker.name}
                             </h4 ><br />
                             <h5 className="mt-1 text-l lg:text-xl font-semibold" 
-                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
-                                 Head of Global Internship Program at Microsoft
+                              style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
+                                {speaker.info}
                             </h5 ><br />
                             <font color="black"> 
-                              Author: Brand Storytelling
+                              {speaker.desc}
                             </font>
                         </p>
                       </div>
-                      <div className="speaker2">
-                        <img src={image5} style={{width:"150px", height:"150px"}} className="sliderimg"/>
-                        <p><h4 className="mt-3 text-xl lg:text-3xl font-semibold" 
-                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
-                                 speaker 2 
-                            </h4 ><br />
-                            <h5 className="mt-1 text-l lg:text-xl font-semibold" 
-                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
-                                 &lt; Title &gt; 
-                            </h5 ><br />
-                            <font color="black"> 
-                              &lt; text &gt; 
-                            </font>
-                        </p>
-                      </div>
-                      <div className="m-4">
-                        <img src={image5} style={{width:"150px", height:"150px"}} className="sliderimg"/>
-                        <p><h4 className="mt-3 text-xl lg:text-3xl font-semibold" 
-                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
-                                 speaker 3 
-                            </h4 ><br />
-                            <h5 className="mt-1 text-l lg:text-xl font-semibold" 
-                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
-                                 &lt; Title &gt; 
-                            </h5 ><br />
-                            <font color="black"> 
-                              &lt; text &gt; 
-                            </font>
-                        </p>
-                      </div>
-                      <div className="m-4">
-                        <img src={image5} style={{width:"150px", height:"150px"}} className="sliderimg"/>
-                        <p><h4 className="mt-3 text-xl lg:text-3xl font-semibold" 
-                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
-                                 speaker 4 
-                            </h4 ><br />
-                            <h5 className="mt-1 text-l lg:text-xl font-semibold" 
-                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
-                                 &lt; Title &gt; 
-                            </h5 ><br />
-                            <font color="black"> 
-                              &lt; text &gt; 
-                            </font>
-                        </p>
-                      </div>    
+                    ))}  
                 </AliceCarousel>
                 </div>
              </Card>
