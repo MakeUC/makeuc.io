@@ -10,10 +10,7 @@ import SEO from "../components/SEO";
 
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
-import image1 from '../../images/1.jpg'
-import image2 from '../../images/2.jpg'
-import image3 from '../../images/3.jpg'
-import image4 from '../../images/4.jpg'
+import image1 from '../../images/1.png'
 import image5 from '../../images/5.png'
 
 // import Schedule from '../components/Schedule';
@@ -199,21 +196,65 @@ export default () => {
                   preventEventOnTouchMove
                   showSlideInfo="true">
                     
-                      <div className="speaker1">he
-                        <img src={image5} style={{width:"150px", height:"150px"}} className="sliderimg"/>
-                        <p><h4 className="text-xl lg:text-3xl font-semibold" style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>speaker 1 </h4><br /> <font color="black"> &lt; text &gt; </font></p>
+                      <div className="speaker1">
+                        <img src={image1} style={{width:"150px", height:"150px"}} className="sliderimg"/>
+                        <p><h4 className="mt-3 text-xl lg:text-3xl font-semibold" 
+                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
+                                 Miri Rodriguez
+                            </h4 ><br />
+                            <h5 className="mt-1 text-l lg:text-xl font-semibold" 
+                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
+                                 Head of Global Internship Program at Microsoft
+                            </h5 ><br />
+                            <font color="black"> 
+                              Author: Brand Storytelling
+                            </font>
+                        </p>
                       </div>
                       <div className="speaker2">
                         <img src={image5} style={{width:"150px", height:"150px"}} className="sliderimg"/>
-                        <p><h4 className="text-xl lg:text-3xl font-semibold" style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>speaker 2 </h4><br /> <font color="black"> &lt; text &gt; </font></p>
+                        <p><h4 className="mt-3 text-xl lg:text-3xl font-semibold" 
+                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
+                                 speaker 2 
+                            </h4 ><br />
+                            <h5 className="mt-1 text-l lg:text-xl font-semibold" 
+                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
+                                 &lt; Title &gt; 
+                            </h5 ><br />
+                            <font color="black"> 
+                              &lt; text &gt; 
+                            </font>
+                        </p>
                       </div>
                       <div className="m-4">
                         <img src={image5} style={{width:"150px", height:"150px"}} className="sliderimg"/>
-                        <p><h4 className="text-xl lg:text-3xl font-semibold" style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>speaker 3 </h4><br /> <font color="black"> &lt; text &gt; </font></p>
+                        <p><h4 className="mt-3 text-xl lg:text-3xl font-semibold" 
+                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
+                                 speaker 3 
+                            </h4 ><br />
+                            <h5 className="mt-1 text-l lg:text-xl font-semibold" 
+                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
+                                 &lt; Title &gt; 
+                            </h5 ><br />
+                            <font color="black"> 
+                              &lt; text &gt; 
+                            </font>
+                        </p>
                       </div>
                       <div className="m-4">
                         <img src={image5} style={{width:"150px", height:"150px"}} className="sliderimg"/>
-                        <p><h4 className="text-xl lg:text-3xl font-semibold" style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>speaker 4 </h4><br /> <font color="black"> &lt; text &gt; </font></p>
+                        <p><h4 className="mt-3 text-xl lg:text-3xl font-semibold" 
+                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
+                                 speaker 4 
+                            </h4 ><br />
+                            <h5 className="mt-1 text-l lg:text-xl font-semibold" 
+                               style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
+                                 &lt; Title &gt; 
+                            </h5 ><br />
+                            <font color="black"> 
+                              &lt; text &gt; 
+                            </font>
+                        </p>
                       </div>    
                 </AliceCarousel>
                 </div>
