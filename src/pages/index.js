@@ -184,7 +184,7 @@ export default () => {
             SPEAKERS
           </h2>
           <div className='carousel mt-12'>
-            <Card className="m-4 bg-gray-700">
+            <Card className="m-4 bg-white">
             <div>
                 <AliceCarousel 
                   autoPlay
@@ -195,16 +195,16 @@ export default () => {
                   preventEventOnTouchMove>
                     {speakers.map((speaker) => (
                       <div key={speaker.name} className="grid lg:grid-cols-2 lg:grid-rows-1">
-                        <img src={speaker.src} style={{maxWidth: '60%', height: 'auto'}} className="mt-3 ml-10 sliderimg"/>
-                        <p><h4 className="mt-3 text-xl lg:text-4xl font-semibold font-mono" 
-                              style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "white"}}>
+                        <img src={speaker.src} style={{maxWidth: '60%', height: 'auto'}} className="mt-4 ml-16 sliderimg"/>
+                        <p><h4 className="mt-3 text-xl lg:text-4xl font-semibold font-sans" 
+                              style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
                                 {speaker.name}
                             </h4 ><br />
-                            <h5 className="mt-1 text-l lg:text-xl font-semibold font-mono" 
-                              style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "white"}}>
+                            <h5 className="mt-1 text-l lg:text-xl font-semibold font-sans" 
+                              style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
                                 {speaker.info}
                             </h5 ><br />
-                            <font color="white" className="font-mono"> 
+                            <font color="black" className="font-sans"> 
                               {speaker.desc}
                             </font>
                         </p>
