@@ -172,7 +172,7 @@ export default () => {
           </div>
         </div>
       </section>
-      <section id="faq" className="py-10 lg:pb-24 lg:pt-24">
+      <section id="speakers" className="py-10 lg:pb-24 lg:pt-24">
         <div className="container mx-auto">
           <h2
             className="text-3xl lg:text-5xl font-semibold text-center"
@@ -184,28 +184,27 @@ export default () => {
             SPEAKERS
           </h2>
           <div className='carousel mt-12'>
-            <Card className="m-4 bg-white">
-            <div className="grid grid-cols-1 grid-rows-1 lg:grid-cols-1 lg:grid-rows-1">
+            <Card className="m-4 bg-gray-700">
+            <div>
                 <AliceCarousel 
                   autoPlay
                   autoPlayInterval="3000" 
                   buttonsDisabled="true" 
                   touchTrackingEnabled="true"
                   controlsStrategy="responsive"
-                  preventEventOnTouchMove
-                  showSlideInfo="true">
+                  preventEventOnTouchMove>
                     {speakers.map((speaker) => (
-                      <div key={speaker.name}>
-                        <img src={speaker.src} style={{width:"150px", height:"150px"}} className="sliderimg"/>
-                        <p><h4 className="mt-3 text-xl lg:text-3xl font-semibold" 
-                              style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
+                      <div key={speaker.name} className="grid lg:grid-cols-2 lg:grid-rows-1">
+                        <img src={speaker.src} style={{maxWidth: '60%', height: 'auto'}} className="mt-3 ml-10 sliderimg"/>
+                        <p><h4 className="mt-3 text-xl lg:text-4xl font-semibold font-mono" 
+                              style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "white"}}>
                                 {speaker.name}
                             </h4 ><br />
-                            <h5 className="mt-1 text-l lg:text-xl font-semibold" 
-                              style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "black"}}>
+                            <h5 className="mt-1 text-l lg:text-xl font-semibold font-mono" 
+                              style={{textDecoration: "underline", textDecorationColor: "#8ae9c1", color: "white"}}>
                                 {speaker.info}
                             </h5 ><br />
-                            <font color="black"> 
+                            <font color="white" className="font-mono"> 
                               {speaker.desc}
                             </font>
                         </p>

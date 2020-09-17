@@ -76,8 +76,14 @@ module.exports = {
         src: "miri.png",
         name: "Miri Rodriguez",
         info: "Head of Global Internship Program at Microsoft",
-        desc: "Author: Brand Storytelling"
-      }
+        desc: "Author: Brand Storytelling Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sollicitudin ac orci phasellus egestas. Tincidunt dui ut ornare lectus sit amet est placerat. Turpis egestas pretium aenean pharetra magna. Augue mauris augue neque gravida in fermentum et sollicitudin. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Tortor at risus viverra adipiscing. Arcu ac tortor dignissim convallis aenean et tortor. Vulputate mi sit amet mauris commodo quis imperdiet. Sed viverra ipsum nunc aliquet."
+      },
+      {
+        src: "google-cloud.svg",
+        name: "Andrea Wu",
+        info: "Software Engineer at Google",
+        desc: "Andrea's a software engineer working on Firebase in Google's NYC office, and she is heavily involved in the company's diversity and university efforts too. Prior, she worked on Yahoo Finance's mobile web and Android app features as well as Cisco's ASA firewall adding network protocols. Outside of work, Andrea loves traveling, spending time outdoors particularly to hike, run, and snowboard, mentoring students, writing, and meeting people from different backgrounds."
+      },
     ],
     sponsors: [
       // L
