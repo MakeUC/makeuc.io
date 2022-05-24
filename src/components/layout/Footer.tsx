@@ -37,7 +37,7 @@ const Footer: FC = () => (
           target="_blank"
           aria-label="Twitter"
           rel="noopener noreferrer"
-          href="https://twitter.com/uc_make"
+          href="https://twitter.com/makeuc_io"
           className="flex-1 social-icon"
         >
           <FaTwitter />
