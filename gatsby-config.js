@@ -28,26 +28,26 @@ module.exports = {
     faq: [
       {
         question: 'WHAT IS A HACKATHON?',
-        answer: `A hackathon is an event where student developers bring their passion for technology to 
-        create a project in 24 hours. It is a chance to collaborate and create something unique in a number of forms – 
-        an app, a robot, or a website! It is an event where you can constantly think outside of the box! You will 
-        hopefully learn something new along the way in our engaging environment! We will also have programming mentors 
-        during the hackathon to answer any questions that you may have!`,
+        answer: `A hackathon is an event where student developers use their passion for technology to 
+        create a project in 24 hours. It is a chance to collaborate and create something unique such as an app, robot, 
+        or website! Hackers will think outside of the box and hopefully learn something new along the way in our 
+        engaging environment!`,
       },
       {
         question: 'WHEN IS MAKEUC?',
         answer:
-          'MakeUC 2021 will start on October 9th and end on the 10th over the span of 24 hours!',
+          'MakeUC 2022 will start on October 22nd and last 24 hours, ending on October 23rd.',
       },
       {
         question: 'WILL MAKEUC BE IN PERSON?',
         answer:
-          'MakeUC 2021 will be partially held in person with the option for hackers to join online!',
+          `MakeUC 2022 will be held in person and online. In-person spots will be limited, virtual spots will
+          be unlimited!`,
       },
       {
         question: 'WHO CAN ATTEND IN PERSON?',
         answer:
-          'The MakeUC Team has sent out initial in-person invitations, and will be following up soon!',
+          'We will release more information soon about who is eligible to attend in person.',
       },
       {
         question: 'HOW MUCH DOES IT COST?',
@@ -57,12 +57,13 @@ module.exports = {
       {
         question: "WHAT IF I'M NEW TO HACKATHONS?",
         answer: `Wonderful! MakeUC is open to all skill levels, beginners to veterans. There is nothing we love more 
-        than helping our hackers learn something new while they build something cool!`,
+        than helping our hackers learn something new while they build something cool! We will have mentors available 
+        during the hackathon to answer any questions that you may have!`,
       },
       {
         question: 'HOW DO I FORM TEAMS?',
-        answer: `Teams are formed at the event (we will be having a team formation segment) but you\'re free to organize 
-        before the event, if all participants are registered. Team size must be between 1 and 4 people.`,
+        answer: `Teams are formed at the event (we will be having a team formation segment), but you\'re free to organize 
+        before the event if all participants are registered. Team size must be between 1 and 4 people.`,
       },
       {
         question: 'WHAT IF I HAVE A SLOW INTERNET CONNECTION?',
@@ -71,12 +72,12 @@ module.exports = {
       },
       {
         question: 'WILL I BE ABLE TO MEET SPONSORS?',
-        answer: `Many of our sponsors will be doing live presentations and a virtual expo which every participant is 
-        encouraged to join!`,
+        answer: `Yes! Many sponsors will be giving workshops throughout the event that all hackers can attend. We will also 
+        have an in-person and virtual sponsor expo where you can interact directly with sponsor representatives.`,
       },
       {
         question: 'WHAT ARE HACKATHON TRACKS?',
-        answer: `We have developed 4 tracks (impact areas) to assist you with building your idea. However, you're not 
+        answer: `Tracks are themes or impact areas for projects meant to assist you with building your idea. You are not 
         required to submit your hack to a track to win a prize!`,
       },
     ],
