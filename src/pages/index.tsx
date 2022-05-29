@@ -100,7 +100,7 @@ const IndexPage: FC = () => {
             className="text-3xl lg:text-5xl font-semibold text-center"
             style={{
               textDecoration: 'underline',
-              textDecorationColor: '#fccf00', // "#8ae9c1",
+              textDecorationColor: '#8b7283',//'#fccf00', // "#8ae9c1",
             }}
           >
             ABOUT
@@ -139,7 +139,7 @@ const IndexPage: FC = () => {
             className="text-3xl lg:text-5xl font-semibold"
             style={{
               textDecoration: 'underline',
-              textDecorationColor: '#fccf00', // "#8ae9c1",
+              textDecorationColor: '#8b7283',//'#fccf00', // "#8ae9c1",
             }}
           >
             TRACKS
@@ -168,7 +168,7 @@ const IndexPage: FC = () => {
             className="text-3xl lg:text-5xl font-semibold"
             style={{
               textDecoration: 'underline',
-              textDecorationColor: '#fccf00', // "#8ae9c1",
+              textDecorationColor: '#8b7283',//'#fccf00', // "#8ae9c1",
             }}
           >
             HYPE WEEK
@@ -198,7 +198,7 @@ const IndexPage: FC = () => {
             className="text-3xl lg:text-5xl font-semibold text-center"
             style={{
               textDecoration: 'underline',
-              textDecorationColor: '#fccf00', // "#8ae9c1",
+              textDecorationColor: '#8b7283',//'#fccf00', // "#8ae9c1",
             }}
           >
             FAQ
@@ -225,7 +225,7 @@ const IndexPage: FC = () => {
             className="text-3xl lg:text-5xl font-semibold"
             style={{
               textDecoration: 'underline',
-              textDecorationColor: '#fccf00', // "#8ae9c1",
+              textDecorationColor: '#8b7283',//'#fccf00', // "#8ae9c1",
             }}
           >
             SPONSORS
