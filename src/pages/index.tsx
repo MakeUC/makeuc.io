@@ -230,6 +230,28 @@ const IndexPage: FC = () => {
           >
             SPONSORS
           </h2>
+          <div  id="sponsor-interest" className="container mx-auto text-center py-120">
+            <h2 className="font-semibold text-center">
+            INTERESTED IN SPONSORING MAKEUC? <br />
+            CONTACT US AT{' '}
+              <a href="mailto:contact@makeuc.io">
+              <u>CONTACT@MAKEUC.IO</u>
+              </a>
+            </h2>
+          {/* <Card className="nes-container is-centered is-rounded m-4 bg-white">
+              <a href="mailto:contact@makeuc.io">
+                <Button size="lg" className="text-md font-bold nes-btn is-centered">
+                CONTACT US
+                </Button>
+              </a>
+              <p className="mt-4 text-md sm:text-xl text-black">
+              OR EMAIL US AT{' '}
+              <a href="mailto:contact@makeuc.io">
+                <u>CONTACT@MAKEUC.IO</u>
+              </a>
+            </p>
+          </Card> */}
+           </div>
           <div className="container mx-auto grid sm:grid-cols-1">
             <div className="mt-12 text-center text-black sm:grid-cols-1">
               <Card className="nes-container is-centered is-rounded m-4 bg-white">
@@ -259,30 +281,6 @@ const IndexPage: FC = () => {
         </div>
       </section>
 
-      <section id="sponsor-interest" className="py-120 lg:pb-24">
-        <div className="container mx-auto text-center">
-          <h2 className="font-semibold text-center">
-            INTERESTED IN SPONSORING MAKEUC? <br />
-            CONTACT US AT{' '}
-            <a href="mailto:contact@makeuc.io">
-              <u>CONTACT@MAKEUC.IO</u>
-            </a>
-          </h2>
-          {/* <Card className="nes-container is-centered is-rounded m-4 bg-white">
-            <a href="mailto:contact@makeuc.io">
-              <Button size="lg" className="text-md font-bold nes-btn is-centered">
-                CONTACT US
-              </Button>
-            </a>
-            <p className="mt-4 text-md sm:text-xl text-black">
-              OR EMAIL US AT{' '}
-              <a href="mailto:contact@makeuc.io">
-                <u>CONTACT@MAKEUC.IO</u>
-              </a>
-            </p>
-          </Card> */}
-        </div>
-      </section>
       <div
         id="ghost"
         className="mb-5 mt-2 mt-4 px-0 px-5 mt-4 sm:px-16 sm:px-8 sm:px-20 mt-2 partner"
