@@ -178,8 +178,8 @@ table tr:nth-child(2n + 2) {
 
 .bg-primary {
   --bg-opacity: 1;
-  background-color: #ff8304;
-  background-color: rgba(255, 131, 4, var(--bg-opacity));
+  background-color: #126f52 /*#ff8304*/;
+  background-color: #126f52/*rgba(255, 131, 4, var(--bg-opacity))*/;
 }
 
 .text-white {

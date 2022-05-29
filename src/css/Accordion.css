@@ -23,7 +23,7 @@
 .active,
 .focus,
 .visited {
-  background-color: #fccf00 /*#8ae9c1;*/
+  background-color: #8b728e;/*light purple*/ /* #fccf00*/ /*#8ae9c1;*/
 }
 
 /* Style the accordion content title */
