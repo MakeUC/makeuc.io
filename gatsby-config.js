@@ -10,19 +10,19 @@ module.exports = {
         These projects include any sort of technology that enhances the learning experiences of students.`,
       },
       {
-        title: 'RETRO THROWBACK',
-        content:
-          'Retro throwback aligns with the main theme of MakeUC 2021! This track includes any technologies aimed towards any genre of retro, including games, movies, music, and more!',
+        title: 'GREEN TECHNOLOGY',
+        content: `While we embark on global adventures, we must consider possible impacts on the environment. Green technology 
+        projects can be eco-friendly or implement an idea to help reduce damage to the environment.`,
       },
       {
         title: 'SOCIAL ISSUES',
-        content:
-          'Increase social responsibility by using technology to promote racial justice, recognize famines, and reduce human environmental impact. Use technology to increase awareness and find solutions.',
+        content: `Improve social responsibility by using technology to promote racial justice, recognize famines, promote 
+        healthcare availability, and more. Projects should increase awareness and find solutions.`,
       },
       {
-        title: 'ADVANCING CONNECTIVITY',
-        content:
-          'Bridging the gap between humans and technology enhancing connections between one another. Increasing socialization, spreading ideas, and enhancing communities.',
+        title: 'GLOBAL CONNECTIVITY',
+        content: `Branch out and explore new ways to build connections between people from all over the world. Whether it\'s 
+        between cities, countries, or continents, we all need ways to connect with one another.`,
       },
     ],
     faq: [
