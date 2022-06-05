@@ -69,12 +69,12 @@ const Header: FC<HeaderProps> = ({ page = 'index' }) => {
             //   <Button className="text-sm font-bold">REGISTER NOW!</Button>
             // </Link>
 
-            <Link to="https://makeuc-2021.devpost.com/">
-              <Button className="text-sm font-bold nes-btn">DEVPOST</Button>
+            <Link to="https://makeuc-2022.devpost.com/">
+              <Button className="text-sm font-bold">DEVPOST</Button>
             </Link>
 
             // <Link to="/register">
-            //   <Button className="text-sm font-bold nes-btn">REGISTER</Button>
+            //   <Button className="text-sm font-bold">REGISTER</Button>
             // </Link>
           )}{' '}
           {/*: (
@@ -85,7 +85,7 @@ const Header: FC<HeaderProps> = ({ page = 'index' }) => {
         </div>
       </div>
 
-      <a
+      {/* <a
         id="mlh-trust-badge"
         className="flex"
         style={{
@@ -107,7 +107,7 @@ const Header: FC<HeaderProps> = ({ page = 'index' }) => {
           alt="Major League Hacking 2022 Hackathon Season"
           style={{ width: '100%' }}
         />
-      </a>
+      </a> */}
     </header>
   );
 };

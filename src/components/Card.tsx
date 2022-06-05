@@ -11,7 +11,7 @@ const Card: FC<CardProps> = ({ className = '', children, style = {} }) => (
   <div
     className={`p-12 border border-solid ${className}`}
     style={{
-      borderColor: '#8174ff',
+      border: '2px solid #034732',
       boxShadow: '0 10px 28px rgba(0,0,0,.08)',
       ...style,
     }}

@@ -64,10 +64,10 @@ const IndexPage: FC = () => {
       <section className="pt-20 md:pt-40">
         <div className="container mx-auto px-8 lg:flex">
           <div className="text-center lg:text-left lg:w-1/2">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">MAKE UC 2021</h1>
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">MAKE UC 2022</h1>
             <p className="text-xl lg:text-3xl mt-6 font-light" style={mediumFontStyle}>
-              NEXT STOP: RETRO <br />
-              <strong>OCTOBER 9-10, 2021</strong>
+              NEXT STOP: EXPLORE <br />
+              <strong>OCTOBER 22-23, 2022</strong>
             </p>
             <p className="mt-8 md:mt-12">
               {/* <Link to="/register">
@@ -76,14 +76,14 @@ const IndexPage: FC = () => {
                 </Button>
               </Link> */}
 
-              <Link to="https://makeuc-2021.devpost.com/">
-                <Button size="lg" className="text-md font-bold nes-btn">
+              <Link to="https://makeuc-2022.devpost.com/">
+                <Button size="lg" className="text-md font-bold">
                   DEVPOST
                 </Button>
               </Link>
 
               {/* <Link to="/register">
-                <Button size="lg" className="text-md font-bold nes-btn">
+                <Button size="lg" className="text-md font-bold">
                   REGISTER
                 </Button>
               </Link> */}
@@ -107,7 +107,7 @@ const IndexPage: FC = () => {
           </h2>
           <div className="grid sm:grid-cols-1">
             <div className="mt-12 text-left text-black">
-              <Card className="m-4 bg-white text-center nes-container is-centered is-rounded">
+              <Card className="m-4 bg-white text-center is-centered is-rounded">
                 <h1 className="text-2xl font-semibold text-black">BACKGROUND</h1>
                 <br />
                 <p style={{ fontSize: '20px' }}>
@@ -120,11 +120,11 @@ const IndexPage: FC = () => {
                   bettering the world. We offer workshops, APIs and resources to help you succeed!
                 </p>
               </Card>
-              <Card className="m-4 bg-white text-center nes-container is-centered is-rounded">
+              <Card className="m-4 bg-white text-center is-centered is-rounded">
                 <h1 className="text-2xl font-semibold text-black">CHANGES TO MAKE UC</h1>
                 <br />
                 <p style={{ fontSize: '20px' }}>
-                  As we begin to move forward into 2021, MakeUC is proud to announce that we will be
+                  As we begin to move forward into 2022, MakeUC is proud to announce that we will be
                   open to partial in-person attendance! Information on in-person attendance will be
                   released in the near future.
                 </p>
@@ -149,7 +149,7 @@ const IndexPage: FC = () => {
               {tracks.map(track => (
                 <Card
                   key={track.title}
-                  className="nes-container is-centered is-rounded m-4 text-secondary bg-white"
+                  className="is-centered is-rounded m-4 text-secondary bg-white"
                 >
                   <h1 className="text-2xl font-semibold text-black">{track.title}</h1>
                   <br />
@@ -174,7 +174,7 @@ const IndexPage: FC = () => {
             HYPE WEEK
           </h2>
           <div className="mt-12">
-            <Card className="nes-container is-centered is-rounded m-4 text-secondary bg-white">
+            <Card className="is-centered is-rounded m-4 text-secondary bg-white">
               <h1 className="text-2xl font-semibold text-black">WHAT IS HYPE WEEK?</h1>
               <br />
               <p className="text-black" style={{ fontSize: '20px' }}>
@@ -184,7 +184,7 @@ const IndexPage: FC = () => {
                 hackers and mentors.
               </p>
             </Card>
-            <Card className="nes-container is-centered is-rounded m-4 text-secondary bg-white">
+            <Card className="is-centered is-rounded m-4 text-secondary bg-white">
               <h1 className="text-2xl font-semibold text-black">SCHEDULE</h1>
               <br />
               <Schedule />
@@ -205,7 +205,7 @@ const IndexPage: FC = () => {
           </h2>
           <div className="grid sm:grid-cols-1">
             <div className="mt-12 text-left text-black">
-              <Card className="nes-container is-centered is-rounded m-4 bg-white">
+              <Card className="is-centered is-rounded m-4 bg-white">
                 {faq.map(faqItem => (
                   <Accordion
                     key={faqItem.question}
@@ -234,13 +234,13 @@ const IndexPage: FC = () => {
             <h2 className="font-semibold text-center">
             INTERESTED IN SPONSORING MAKEUC? <br />
             CONTACT US AT{' '}
-              <a href="mailto:contact@makeuc.io">
+              <a href="mailto:contact@makeuc.io" style={{color: '#fff'}}>
               <u>CONTACT@MAKEUC.IO</u>
               </a>
             </h2>
-          {/* <Card className="nes-container is-centered is-rounded m-4 bg-white">
+          {/* <Card className="is-centered is-rounded m-4 bg-white">
               <a href="mailto:contact@makeuc.io">
-                <Button size="lg" className="text-md font-bold nes-btn is-centered">
+                <Button size="lg" className="text-md font-bold is-centered">
                 CONTACT US
                 </Button>
               </a>
@@ -254,7 +254,7 @@ const IndexPage: FC = () => {
            </div>
           <div className="container mx-auto grid sm:grid-cols-1">
             <div className="mt-12 text-center text-black sm:grid-cols-1">
-              <Card className="nes-container is-centered is-rounded m-4 bg-white">
+              <Card className="is-centered is-rounded m-4 bg-white">
                 {sponsors.map((category, index) => (
                   <>
                     {!!index && index !== 6 && index !== 2 && <hr className="mt-5" />}{' '}

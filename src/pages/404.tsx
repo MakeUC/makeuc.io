@@ -25,7 +25,7 @@ const Error404Page: FC = () => (
             </p>
             <p className="mt-8 md:mt-12">
               <Link to="/">
-                <Button size="lg" className="text-md font-bold nes-btn">
+                <Button size="lg" className="text-md font-bold">
                   Home
                 </Button>
               </Link>

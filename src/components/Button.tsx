@@ -1,4 +1,5 @@
 import React, { ButtonHTMLAttributes, DetailedHTMLProps, FC, ReactNode } from 'react';
+import styled from 'styled-components';
 
 const sizes = {
   default: `py-3 px-8`,
@@ -15,22 +16,25 @@ export type ButtonProps = DetailedHTMLProps<
   children: ReactNode;
 };
 
-const Button: FC<ButtonProps> = ({ children, className = '', size = 'default', ...props }) => {
+const StyledButton = styled.button`
+  border: 1px solid #f1f1f1;
+`;
+
+const Button: FC<ButtonProps> = ({ children, className = '', size = 'default', ref, ...props }) => {
   return (
-    <button
+    <StyledButton
       className={`
         ${sizes[size]}
         ${className}
         bg-primary
         hover:bg-secondary
-        hover:text-primary-darker
         rounded
         text-white
     `}
       {...props}
     >
       {children}
-    </button>
+    </StyledButton>
   );
 };
 

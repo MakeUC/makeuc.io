@@ -28,7 +28,7 @@
 
 /* Style the accordion content title */
 .accordion__title {
-  font-family: 'Montserrat', Montserrat; /* I'm not going to lie, I have no idea what the san-serif does but I'm terrified to take it out*/
+  font-family: 'Montserrat', Montserrat, sans-serif; 
   font-weight: 400;
   font-size: 30px;
   text-align: left;

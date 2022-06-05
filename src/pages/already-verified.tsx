@@ -15,11 +15,11 @@ const AlreadyVerifiedPage: FC = () => (
               You have already verified your email!
             </h1>
             <p className="text-xl lg:text-3xl mt-6 font-light">
-              We are looking forward to meeting you virtually on October 9-10, 2021
+              We are looking forward to meeting you virtually on October 22-23, 2022
             </p>
             <p className="mt-8 md:mt-12">
               <Link to="/">
-                <Button size="lg" className="text-md font-bold nes-btn">
+                <Button size="lg" className="text-md font-bold">
                   Home
                 </Button>
               </Link>

@@ -1,5 +1,4 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
 import React, { FC } from 'react';
 
 const FooterImg: FC = () => {
@@ -15,7 +14,8 @@ const FooterImg: FC = () => {
     }
   `);
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
+  return <></>;
+  // return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
 };
 
 export default FooterImg;

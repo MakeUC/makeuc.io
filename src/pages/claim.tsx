@@ -18,7 +18,7 @@ const ClaimPage: FC = () => (
             </p>
             <p className="mt-8 md:mt-12">
               <a download="MakeUCVirtualSwag.zip" href="/assets.zip" title="MakeUCVirtualSwag">
-                <Button size="lg" className="text-md font-bold nes-btn">
+                <Button size="lg" className="text-md font-bold">
                   CLAIM
                 </Button>
               </a>
