@@ -37,11 +37,11 @@ const IndexPage: FC = () => {
   const { tracks, faq, sponsors } = data.site.siteMetadata;
 
   const smallFontStyle = {
-    fontSize: 12,
+    fontSize: 20,
   };
 
   const mediumFontStyle = {
-    fontSize: 20,
+    fontSize: 30,
   };
   // Recently edited for making nav-bar contents responsive
   const [width, setWindowWidth] = useState(0);
@@ -64,7 +64,7 @@ const IndexPage: FC = () => {
       <section className="pt-20 md:pt-40">
         <div className="container mx-auto px-8 lg:flex">
           <div className="text-center lg:text-left lg:w-1/2">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">MAKEUC 2021</h1>
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">MAKE UC 2021</h1>
             <p className="text-xl lg:text-3xl mt-6 font-light" style={mediumFontStyle}>
               NEXT STOP: RETRO <br />
               <strong>OCTOBER 9-10, 2021</strong>
@@ -97,7 +97,7 @@ const IndexPage: FC = () => {
       <section id="about" className="py-10 lg:pb-24 lg:pt-24">
         <div className="container mx-auto">
           <h2
-            className="text-3xl lg:text-5xl font-semibold text-center"
+            className="text-6xl lg:text-9xl font-semibold text-center"
             style={{
               textDecoration: 'underline',
               textDecorationColor: '#8b7283',//'#fccf00', // "#8ae9c1",
@@ -110,7 +110,7 @@ const IndexPage: FC = () => {
               <Card className="m-4 bg-white text-center nes-container is-centered is-rounded">
                 <h1 className="text-2xl font-semibold text-black">BACKGROUND</h1>
                 <br />
-                <p style={{ fontSize: '16px' }}>
+                <p style={{ fontSize: '20px' }}>
                   MakeUC is a 24-hour hackathon hosted by{' '}
                   <a target="_blank" rel="noopener noreferrer" href="https://ieee.uc.edu/">
                     IEEE at University of Cincinnati
@@ -121,9 +121,9 @@ const IndexPage: FC = () => {
                 </p>
               </Card>
               <Card className="m-4 bg-white text-center nes-container is-centered is-rounded">
-                <h1 className="text-2xl font-semibold text-black">CHANGES TO MAKEUC</h1>
+                <h1 className="text-2xl font-semibold text-black">CHANGES TO MAKE UC</h1>
                 <br />
-                <p style={{ fontSize: '16px' }}>
+                <p style={{ fontSize: '20px' }}>
                   As we begin to move forward into 2021, MakeUC is proud to announce that we will be
                   open to partial in-person attendance! Information on in-person attendance will be
                   released in the near future.
@@ -177,7 +177,7 @@ const IndexPage: FC = () => {
             <Card className="nes-container is-centered is-rounded m-4 text-secondary bg-white">
               <h1 className="text-2xl font-semibold text-black">WHAT IS HYPE WEEK?</h1>
               <br />
-              <p className="text-black" style={{ fontSize: '16px' }}>
+              <p className="text-black" style={{ fontSize: '20px' }}>
                 Hype Week is a week of events and workshops that will help you get to know your
                 fellow hackers, sponsors, mentors, and the MakeUC community. We&amp;ll be hosting
                 workshops on a number of different topics as well as some fun events to network with

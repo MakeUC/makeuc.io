@@ -17,19 +17,23 @@ main {
   background-attachment: fixed;
   color: theme('colors.white');
   font-family: 'Montserrat';
+  font-weight: bold;
   cursor:url('./cursorn.png') , auto;
+   font-size: 12px
 }
 
 body {
   background-color: #110000;
+
 }
 
 .navbar {
   transition: 0.5s;
+
 }
 
 .navbar.top {
-  background-color: 'transparent';
+  background-color: theme('colors.secondary.translucent');
 }
 
 .navbar.scrolling {
@@ -38,23 +42,31 @@ body {
 
 .navbar .nav-link {
   font-weight: bold;
+  font-size: 30px;
+  background-color:theme('colors.white');
+
 }
 
 .navbar .nav-link:hover {
   color: theme('colors.secondary.default');
+  cursor:url('./cursors.png') , pointer	;
+
 }
 
 .social-icon {
-  font-size: 30px;
+  font-size: 20px;
+  cursor:url('./cursors.png') , pointer	;
+
 }
 
 .register-form input,
 .register-form select {
   color: theme('colors.black');
+  
 }
 
 .register-form input[type='file'] {
-  color: theme('colors.white');
+  color: theme('colors.black	');
 }
 
 .dropzone {
@@ -99,14 +111,18 @@ body {
 
 .partner:hover {
   opacity: 0.6;
+  cursor:url('./cursors.png') , pointer	;
+
 }
 
 #ghost {
   display: none;
+
 }
 
 footer.mountain-background {
   background-color: #110000;
+
 }
 
 .nes-container.is-transparent-dark {
@@ -115,6 +131,7 @@ footer.mountain-background {
   color: #fff;
   background-color: rgba(59, 31, 134, 0.6);
   border-color: #fff;
+
 }
 
 .nes-container.is-transparent-dark.with-title > .title {
@@ -125,29 +142,40 @@ footer.mountain-background {
 #logo {
   max-width: auto;
   height: auto;
+
 }
 
 .schedule-bg {
   background-color: $purple-white !important;
+  font-size: 25px;
+
 }
 
 table tr:nth-child(2n + 2) {
+  font-size: 25px;
   background-color: #ecebf5;
 }
 
 .schedule-gray-row tr:nth-child(1) {
+  font-size: 25px;
+
   background-color: #ecebf5;
 }
 
 .schedule-date-time {
   width: 1.5rem !important;
+  font-size: 25px;
+
 }
 
 .schedule-name {
+  font-size: 20px;
   width: 1.5rem !important;
 }
 
 .schedule-table {
+  font-size: 25px;
+
   table-layout: fixed !important;
 }
 
@@ -171,12 +199,16 @@ table tr:nth-child(2n + 2) {
   background-color: #fff;
   border-style: solid;
   border-width: 4px;
+  font-size: 40px;
+
 }
 
 .bg-primary {
   --bg-opacity: 1;
   background-color: #126f52 /*#ff8304*/;
   background-color: #126f52/*rgba(255, 131, 4, var(--bg-opacity))*/;
+  font-size: 20px;
+
 }
 
 .text-white {
