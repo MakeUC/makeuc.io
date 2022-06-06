@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import PacmanWait from '../svg/pacmanReady.png';
-import PacmanGIF from '../svg/pacmanScrollUp.gif';
+import { faCircleArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FC } from 'react';
 import ScrollTop from './ScrollTop';
 
 export type ScrollTopButtonProps = {
@@ -14,8 +14,8 @@ const ScrollTopButton: FC<ScrollTopButtonProps> = ({ distance = 700 }) => (
     breakpoint={50000}
     speed={1000}
     bottomOffset={200}
-    litSrc={PacmanGIF}
-    hoveringSrc={PacmanWait}
+    lit={<FontAwesomeIcon icon={faCircleArrowUp} style={{fontSize: '3em', color: '#8b728e'}} />}
+    hovering={<FontAwesomeIcon icon={faCircleArrowUp} style={{fontSize: '3em', color: '#126f52'}} />}
     style={{
       border: 'none',
       padding: 0,

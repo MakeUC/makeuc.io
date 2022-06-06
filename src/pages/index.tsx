@@ -1,10 +1,8 @@
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import React, { FC, useEffect, useState } from 'react';
 import Accordion from '../components/Accordion';
-import Button from '../components/Button';
 import Card from '../components/Card';
 import Layout from '../components/layout/Layout';
-import Schedule from '../components/Schedule/Schedule';
 import SEO from '../components/SEO';
 import HeaderImg from '../images/better_header_retro.png';
 
@@ -64,9 +62,9 @@ const IndexPage: FC = () => {
       <section className="pt-20 md:pt-40">
         <div className="container mx-auto px-8 lg:flex">
           <div className="text-center lg:text-left lg:w-1/2">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">MAKE UC 2022</h1>
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">MAKEUC 2022</h1>
             <p className="text-xl lg:text-3xl mt-6 font-light" style={mediumFontStyle}>
-              NEXT STOP: EXPLORE <br />
+              NEXT STOP: MAKE YOUR WORLD <br />
               <strong>OCTOBER 22-23, 2022</strong>
             </p>
             <p className="mt-8 md:mt-12">
@@ -76,11 +74,11 @@ const IndexPage: FC = () => {
                 </Button>
               </Link> */}
 
-              <Link to="https://makeuc-2022.devpost.com/">
+              {/* <Link to="https://makeuc-2022.devpost.com/">
                 <Button size="lg" className="text-md font-bold">
                   DEVPOST
                 </Button>
-              </Link>
+              </Link> */}
 
               {/* <Link to="/register">
                 <Button size="lg" className="text-md font-bold">
@@ -162,7 +160,7 @@ const IndexPage: FC = () => {
           </div>
         </div>
       </section>
-      <section id="hypeweek" className="py-10 lg:pb-24 lg:pt-24">
+      {/* <section id="hypeweek" className="py-10 lg:pb-24 lg:pt-24">
         <div className="container mx-auto text-center">
           <h2
             className="text-3xl lg:text-5xl font-semibold"
@@ -191,7 +189,7 @@ const IndexPage: FC = () => {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
       <section id="faq" className="py-10 lg:pb-24 lg:pt-24">
         <div className="container mx-auto">
           <h2

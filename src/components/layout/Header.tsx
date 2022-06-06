@@ -1,12 +1,47 @@
 import { Link } from 'gatsby';
 import React, { FC, useEffect, useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import styled from 'styled-components';
 import LogoIcon from '../../svg/LogoIcon';
-import Button from '../Button';
 
 export type HeaderProps = {
   page?: string;
 };
+
+const Nav = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  background-color: #212121;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 36px;
+  z-index: 3;
+  color: #f1f1f1;
+  font-size: 2em;
+
+  > *:nth-child(2) {
+    display: flex;
+    justify-content: center;
+  }
+
+  > *:nth-child(3) {
+    display: flex;
+    justify-content: end;
+  }
+
+  a {
+    color: #f1f1f1 !important;
+
+    :hover {
+      color: #8b728e !important;
+    }
+  }
+
+`;
 
 const Header: FC<HeaderProps> = ({ page = 'index' }) => {
   const [state, setState] = useState('top');
@@ -28,64 +63,43 @@ const Header: FC<HeaderProps> = ({ page = 'index' }) => {
   });
 
   return (
-    <header
-      className={`sticky top-0 shadow navbar ${state}`}
-      style={{
-        zIndex: 10,
-      }}
-    >
-      <div className="container flex flex-col sm:flex-row items-center max-w-full px-8 py-2">
+      <Nav>
         <Link to="/">
-          <div className="flex items-center">
-            <div className="w-14 md:ml-24 lg:ml-30">
-              <LogoIcon />
-            </div>
-          </div>
+          <LogoIcon />
         </Link>
-        {page === 'index' && (
-          <div className="flex justify-evenly md:justify-center flex-grow mt-3 sm:mt-0 text-xs sm:text-sm md:text-base">
-            <AnchorLink className="px-4 xs:px-2 nav-link" href="#about">
-              ABOUT
-            </AnchorLink>
-            {/* <AnchorLink href="#schedule"></AnchorLink> */}
-            <AnchorLink className="px-4 xs:px-2 nav-link" href="#tracks">
-              TRACKS
-            </AnchorLink>
-            <AnchorLink className="px-4 xs:px-2 nav-link" href="#hypeweek">
-              HYPEWEEK
-            </AnchorLink>
-            <AnchorLink className="px-4 xs:px-2 nav-link" href="#faq">
-              FAQ
-            </AnchorLink>
-            {/* <AnchorLink href="#prizes"></AnchorLink> */}
-            <AnchorLink className="px-4 xs:px-2 nav-link" href="#sponsors">
-              SPONSORS
-            </AnchorLink>
-          </div>
-        )}
-        <div className="hidden md:block">
+        <div>
           {page === 'index' && (
-            // <Link to="/register">
-            //   <Button className="text-sm font-bold">REGISTER NOW!</Button>
+            <>
+              <AnchorLink className="px-4 xs:px-2 nav-link" href="#about">
+                ABOUT
+              </AnchorLink>
+              <AnchorLink className="px-4 xs:px-2 nav-link" href="#tracks">
+                TRACKS
+              </AnchorLink>
+              <AnchorLink className="px-4 xs:px-2 nav-link" href="#faq">
+                FAQ
+              </AnchorLink>
+              <AnchorLink className="px-4 xs:px-2 nav-link" href="#sponsors">
+                SPONSORS
+              </AnchorLink>
+            </>
+          )}
+        </div>
+        <div>
+          &nbsp;
+          {page === 'index' && (
+            <></>
+            
+            // <Link to="https://makeuc-2022.devpost.com/">
+            //   <Button className="text-sm font-bold">DEVPOST</Button>
             // </Link>
-
-            <Link to="https://makeuc-2022.devpost.com/">
-              <Button className="text-sm font-bold">DEVPOST</Button>
-            </Link>
 
             // <Link to="/register">
             //   <Button className="text-sm font-bold">REGISTER</Button>
             // </Link>
-          )}{' '}
-          {/*: (
-            <Link to="/">
-              <Button className="text-sm font-bold">HOME</Button>
-          </Link>
-          )} */}
+          )}
         </div>
-      </div>
-
-      {/* <a
+        {/* <a
         id="mlh-trust-badge"
         className="flex"
         style={{
@@ -108,7 +122,7 @@ const Header: FC<HeaderProps> = ({ page = 'index' }) => {
           style={{ width: '100%' }}
         />
       </a> */}
-    </header>
+      </Nav>
   );
 };
 

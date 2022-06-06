@@ -1,4 +1,4 @@
-import React, { FC, useCallback, useEffect, useState } from 'react';
+import React, { FC, ReactNode, useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const ScrollToTopButton = styled.button`
@@ -50,8 +50,8 @@ export type ScrollTopProps = {
   breakpoint?: number;
   speed?: number;
   target?: number;
-  litSrc: string;
-  hoveringSrc: string;
+  lit: ReactNode;
+  hovering: ReactNode;
 };
 
 const ScrollTop: FC<ScrollTopProps> = ({
@@ -63,8 +63,8 @@ const ScrollTop: FC<ScrollTopProps> = ({
   breakpoint = 991,
   speed = 250,
   target = 0,
-  litSrc,
-  hoveringSrc,
+  lit,
+  hovering,
 }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isFixed, setIsFixed] = useState(true);
@@ -159,10 +159,10 @@ const ScrollTop: FC<ScrollTopProps> = ({
           padding: '10px 15px',
         }}
       >
-        <img src={isFlying ? litSrc : hoveringSrc} alt="scroll to top button" />
+        {isFlying && lit || hovering}
       </div>
     ),
-    [hoveringSrc, isFlying, litSrc],
+    [hovering, isFlying, lit],
   );
 
   useEffect(() => {
