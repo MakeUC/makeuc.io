@@ -1,10 +1,17 @@
 language: node_js
 
 node_js:
-  - 12
+  - 16
 
 script:
   - npm run build
+
+before_install:
+  - sudo apt-get -y install nasm
+
+addons:
+  apt:
+    update: true
 
 deploy:
   - provider: s3

@@ -1,84 +1,87 @@
-import React, { useState, useEffect } from 'react';
+import React, { FC, useState } from 'react';
+import { useDropzone } from 'react-dropzone';
 import { useForm } from 'react-hook-form';
-import { FaSpinner } from 'react-icons/fa';
-import { useDropzone } from 'react-dropzone';
-import Footer from '../components/layout/Footer';
-import Button from '../components/Button';
 import Card from '../components/Card';
 import FooterImage from '../components/FooterImage';
+import Footer from '../components/layout/Footer';
+import Header from '../components/layout/Header';
 import SEO from '../components/SEO';
 import { RegistrantDTO } from '../data/registrant.dto';
-import Header from '../components/layout/Header';
-import * as tooltip from '../components/ToolTips'
 
-// @ts-ignore
-import regData from '../../content/registration.yaml';
-
-const apiUrl = process.env.GATSBY_API_URL || `https://makeuc-registration-dev.herokuapp.com`;
+const apiUrl = process.env.GATSBY_API_URL || 'https://makeuc-registration-dev.herokuapp.com';
 
 const SUCCESS = 201;
 const ALREADY_EXISTS = 400;
 const SERVER_ERROR = 500;
 const NAME_ERROR = 900;
 
-export default () => {
+const RegisterPage: FC = () => {
   const { register, errors, handleSubmit } = useForm<RegistrantDTO>();
-  const { acceptedFiles, getRootProps, getInputProps } = useDropzone({ accept: `.pdf`, multiple: false });
-  const [ submitting, setSubmitting ] = useState(false);
-  const [ result, setResult ] = useState<number>(0);
+  const { acceptedFiles, getRootProps, getInputProps } = useDropzone({
+    accept: '.pdf',
+    multiple: false,
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [result, setResult] = useState<number>(0);
 
   const onSubmit = async (data: RegistrantDTO, event: React.BaseSyntheticEvent) => {
     setResult(0);
     setSubmitting(true);
 
     const formData = new FormData(event.target);
-    if(acceptedFiles.length) {
-      formData.set(`resume`, acceptedFiles[0], acceptedFiles[0].name);
+    if (acceptedFiles.length) {
+      formData.set('resume', acceptedFiles[0], acceptedFiles[0].name);
     }
 
-    const validName = formData.get('fullName').toString()
-                        .trim()
-                        .indexOf(' ') >= 0;
-    
+    const validName =
+      formData
+        .get('fullName')
+        .toString()
+        .trim()
+        .indexOf(' ') >= 0;
+
     try {
-      if (validName){
+      if (validName) {
         const res = await fetch(`${apiUrl}/registrant`, {
-          method: `POST`,
-          body: formData
+          method: 'POST',
+          body: formData,
         });
 
         setResult(res.status);
-      }
-      else {
+      } else {
         setResult(NAME_ERROR);
       }
     } catch (err) {
       setResult(SERVER_ERROR);
     } finally {
-      window.scrollTo({ top: 0, behavior: `smooth` });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       setSubmitting(false);
     }
   };
 
-  return <>
-    <SEO />
-    <main>
-      <Header page="register" />
-      <section id="features" className="py-20 lg:pt-20">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl lg:text-5xl font-semibold"
-          style={{  
-            textDecoration: 'underline',
-            textDecorationColor: '#fccf00'
-          }}
-          >REGISTRATION FORM</h2>
-          <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
-            <div className="flex-1 px-3">
-              <Card className="mb-0 nes-container is-dark is-rounded">
-                {/* Comment this out when registration is closed and live site is up */}
-                 {/* {(result === SUCCESS) ?
+  return (
+    <>
+      <SEO />
+      <main>
+        <Header page="register" />
+        <section id="features" className="py-20 lg:pt-20">
+          <div className="container mx-auto text-center">
+            <h2
+              className="text-3xl lg:text-5xl font-semibold"
+              style={{
+                textDecoration: 'underline',
+                textDecorationColor: '#fccf00',
+              }}
+            >
+              REGISTRATION FORM
+            </h2>
+            <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
+              <div className="flex-1 px-3">
+                <Card className="mb-0 is-dark is-rounded">
+                  {/* Comment this out when registration is closed and live site is up */}
+                  {/* {(result === SUCCESS) ?
                   <div className="flex items-center bg-secondary-darker text-black text-sm font-bold px-4 py-3" role="alert">
-                    <p>We have sent you a confirmation email. In order to complete the sign-up process, 
+                    <p>We have sent you a confirmation email. In order to complete the sign-up process,
                       please click on the confirmation link. It might have landed in your spam folder.</p>
                   </div> :
                   <>
@@ -303,11 +306,11 @@ export default () => {
                             type="checkbox"
                             className="mr-2 leading-tight"
                           />
-                          I have read and agree to the <a 
+                          I have read and agree to the <a
                             target="_blank"
                             aria-label = "Code of Conduct"
                             rel="noopener noreferrer"
-                            className="light-link" 
+                            className="light-link"
                             href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
                           >
                             MLH Code of Conduct</a>.
@@ -322,26 +325,26 @@ export default () => {
                             type="checkbox"
                             className="mr-2 leading-tight"
                           />
-                          I authorize you to share my application/registration information for event administration, ranking, MLH administration, 
-                          pre and post-event informational e-mails, and occasional messages about hackathons in-line with the <a 
+                          I authorize you to share my application/registration information for event administration, ranking, MLH administration,
+                          pre and post-event informational e-mails, and occasional messages about hackathons in-line with the <a
                             target="_blank"
                             aria-label = "MLH Privacy Policy"
                             rel="noopener noreferrer"
-                            className="light-link" 
+                            className="light-link"
                             href="https://mlh.io/privacy"
                           >
-                          MLH Privacy Policy</a>. I further agree to the terms of both the <a 
+                          MLH Privacy Policy</a>. I further agree to the terms of both the <a
                             target="_blank"
                             aria-label = "MLH Contest Terms and Conditions"
                             rel="noopener noreferrer"
-                            className="light-link" 
+                            className="light-link"
                             href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions"
                           >
-                          MLH Contest Terms and Conditions</a> and the <a 
+                          MLH Contest Terms and Conditions</a> and the <a
                             target="_blank"
                             aria-label = "MLH Privacy Policy"
                             rel="noopener noreferrer"
-                            className="light-link" 
+                            className="light-link"
                             href="https://mlh.io/privacy"
                           >
                             MLH Privacy Policy</a>.
@@ -356,7 +359,7 @@ export default () => {
                             type="checkbox"
                             className="mr-2 leading-tight"
                           />
-                          I authorize MLH to send me pre- and post-event informational e-mails, which contain free credit and opportunities from their partners. 
+                          I authorize MLH to send me pre- and post-event informational e-mails, which contain free credit and opportunities from their partners.
                         </label>
                         {errors.communication && <span className="text-red-500 font-bold text-xs italic">&nbsp;&nbsp;Please check this box</span>}
                       </div>
@@ -374,19 +377,23 @@ export default () => {
                   </>
                 } */}
 
-                {/* Comment this out when registration opens up */}
-                
-                <div className="flex items-center bg-secondary-darker text-black text-xl font-bold px-4 py-3" role="alert">
-                  <p>Registration is closed for now, please check us out soon!</p>
-                </div>
-               
-              </Card>
+                  {/* Comment this out when registration opens up */}
+
+                  <div
+                    className="flex items-center bg-secondary-darker text-black text-xl font-bold px-4 py-3"
+                    role="alert"
+                  >
+                    <p>Registration is closed for now, please check us out soon!</p>
+                  </div>
+                </Card>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <FooterImage />
-    </main>
-    <Footer />
-  </>;
+        </section>
+        <FooterImage />
+      </main>
+      <Footer />
+    </>
+  );
 };
+export default RegisterPage;
