@@ -5,6 +5,7 @@ import Accordion from '../components/Accordion';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import Layout from '../components/layout/Layout';
+import SectionHeader from '../components/SectionHeader';
 import SEO from '../components/SEO';
 import HeaderImg from '../images/header_title_image.png';
 
@@ -91,7 +92,10 @@ const IndexPage: FC = () => {
         <div className="container mx-auto px-8 lg:flex">
           <TitleContainer>
             <div>
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
+              <h1
+                className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none"
+                style={{ fontFamily: 'Quantum' }}
+              >
                 MAKEUC 2022
               </h1>
               <p className="text-xl lg:text-3xl mt-6 font-light" style={mediumFontStyle}>
@@ -118,16 +122,8 @@ const IndexPage: FC = () => {
         </div>
       </section>
       <section id="about" className="py-10 lg:pb-24 lg:pt-24">
-        <div className="container mx-auto">
-          <h2
-            className="text-6xl lg:text-9xl font-semibold text-center"
-            style={{
-              textDecoration: 'underline',
-              textDecorationColor: '#8b7283',
-            }}
-          >
-            ABOUT
-          </h2>
+        <div className="container mx-auto text-center">
+          <SectionHeader>ABOUT</SectionHeader>
           <div className="grid sm:grid-cols-1">
             <div className="mt-12 text-left text-black">
               <Card className="m-4 bg-white text-center is-centered is-rounded">
@@ -158,15 +154,7 @@ const IndexPage: FC = () => {
       </section>
       <section id="tracks" className="py-10 lg:pb-24 lg:pt-24">
         <div className="container mx-auto text-center">
-          <h2
-            className="text-3xl lg:text-5xl font-semibold"
-            style={{
-              textDecoration: 'underline',
-              textDecorationColor: '#8b7283', // '#fccf00', // "#8ae9c1",
-            }}
-          >
-            TRACKS
-          </h2>
+          <SectionHeader>TRACKS</SectionHeader>
           <div className="mt-12">
             <div className="grid lg:grid-cols-2 sm:grid-cols-1">
               {tracks.map(track => (
@@ -216,16 +204,8 @@ const IndexPage: FC = () => {
         </div>
       </section> */}
       <section id="faq" className="py-10 lg:pb-24 lg:pt-24">
-        <div className="container mx-auto">
-          <h2
-            className="text-3xl lg:text-5xl font-semibold text-center"
-            style={{
-              textDecoration: 'underline',
-              textDecorationColor: '#8b7283', // '#fccf00', // "#8ae9c1",
-            }}
-          >
-            FAQ
-          </h2>
+        <div className="container mx-auto text-center">
+          <SectionHeader>FAQ</SectionHeader>
           <div className="grid sm:grid-cols-1">
             <div className="mt-12 text-left text-black">
               <Card className="is-centered is-rounded m-4 bg-white">
@@ -244,15 +224,7 @@ const IndexPage: FC = () => {
 
       <section id="sponsors" className="py-10 lg:pb-24 lg:pt-24">
         <div className="container mx-auto text-center">
-          <h2
-            className="text-3xl lg:text-5xl font-semibold"
-            style={{
-              textDecoration: 'underline',
-              textDecorationColor: '#8b7283', // '#fccf00', // "#8ae9c1",
-            }}
-          >
-            SPONSORS
-          </h2>
+          <SectionHeader>SPONSORS</SectionHeader>
           <div id="sponsor-interest" className="container mx-auto text-center py-120">
             <h2 className="font-semibold text-center">
               INTERESTED IN SPONSORING MAKEUC? <br />
