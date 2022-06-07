@@ -65,7 +65,7 @@ const RegisterPage: FC = () => {
       <main>
         <Header page="register" />
         <section id="features" className="py-20 lg:pt-20">
-          <div className="container mx-auto text-center">
+          <div className="container mx-auto text-center mt-4">
             <h2
               className="text-3xl lg:text-5xl font-semibold"
               style={{
@@ -77,9 +77,9 @@ const RegisterPage: FC = () => {
             </h2>
             <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
               <div className="flex-1 px-3">
-                <Card className="mb-0 is-dark is-rounded">
-                  {/* Comment this out when registration is closed and live site is up */}
-                  {/* {(result === SUCCESS) ?
+                {/* <Card className="mb-0 is-dark is-rounded"> */}
+                {/* Comment this out when registration is closed and live site is up */}
+                {/* {(result === SUCCESS) ?
                   <div className="flex items-center bg-secondary-darker text-black text-sm font-bold px-4 py-3" role="alert">
                     <p>We have sent you a confirmation email. In order to complete the sign-up process,
                       please click on the confirmation link. It might have landed in your spam folder.</p>
@@ -376,16 +376,16 @@ const RegisterPage: FC = () => {
                     </form>
                   </>
                 } */}
+                {/* </Card> */}
 
-                  {/* Comment this out when registration opens up */}
-
-                  <div
-                    className="flex items-center bg-secondary-darker text-black text-xl font-bold px-4 py-3"
-                    role="alert"
-                  >
-                    <p>Registration is closed for now, please check us out soon!</p>
-                  </div>
-                </Card>
+                {/* Comment this out when registration opens up */}
+                <div className="text-left text-black">
+                  <Card className="m-4 bg-white text-center is-centered is-rounded">
+                    <p style={{ fontSize: '20px' }}>
+                      Registration is closed for now, please check us out soon!
+                    </p>
+                  </Card>
+                </div>
               </div>
             </div>
           </div>

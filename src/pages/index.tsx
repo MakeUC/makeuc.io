@@ -1,10 +1,38 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import React, { FC, useEffect, useState } from 'react';
+import styled from 'styled-components';
 import Accordion from '../components/Accordion';
+import Button from '../components/Button';
 import Card from '../components/Card';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
-import HeaderImg from '../images/better_header_retro.png';
+import HeaderImg from '../images/header_title_image.png';
+
+const TitleContainer = styled.div`
+  display: flex;
+  width: 100%;
+  margin-top: 4em;
+  align-items: flex-end;
+  align-content: flex-end;
+  justify-content: space-between;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+    * {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+    }
+
+    > :last-child {
+      display: none;
+    }
+  }
+`;
 
 export const query = graphql`
   query {
@@ -61,35 +89,32 @@ const IndexPage: FC = () => {
       <SEO />
       <section className="pt-20 md:pt-40">
         <div className="container mx-auto px-8 lg:flex">
-          <div className="text-center lg:text-left lg:w-1/2">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">MAKEUC 2022</h1>
-            <p className="text-xl lg:text-3xl mt-6 font-light" style={mediumFontStyle}>
-              NEXT STOP: MAKE YOUR WORLD <br />
-              <strong>OCTOBER 22-23, 2022</strong>
-            </p>
-            <p className="mt-8 md:mt-12">
-              {/* <Link to="/register">
-                <Button size="lg" className="font-sans text-md font-bold">
-                  REGISTER
-                </Button>
-              </Link> */}
-
-              {/* <Link to="https://makeuc-2022.devpost.com/">
-                <Button size="lg" className="text-md font-bold">
-                  DEVPOST
-                </Button>
-              </Link> */}
-
-              {/* <Link to="/register">
-                <Button size="lg" className="text-md font-bold">
-                  REGISTER
-                </Button>
-              </Link> */}
-            </p>
-          </div>
-          <div className="lg:w-1/2">
-            <img className="m-auto" style={{ width: '60%' }} src={HeaderImg} alt="MakeUC Header" />
-          </div>
+          <TitleContainer>
+            <div>
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
+                MAKEUC 2022
+              </h1>
+              <p className="text-xl lg:text-3xl mt-6 font-light" style={mediumFontStyle}>
+                MAKE YOUR WORLD <br />
+                <strong>OCTOBER 22-23, 2022</strong>
+              </p>
+              <p className="mt-8 mb-12 md:mt-12">
+                <Link to="/register">
+                  <Button size="lg" className="font-sans text-md font-bold">
+                    REGISTER
+                  </Button>
+                </Link>
+              </p>
+            </div>
+            <div>
+              <img
+                className="m-auto"
+                style={{ width: '90%' }}
+                src={HeaderImg}
+                alt="MakeUC Header"
+              />
+            </div>
+          </TitleContainer>
         </div>
       </section>
       <section id="about" className="py-10 lg:pb-24 lg:pt-24">
@@ -98,7 +123,7 @@ const IndexPage: FC = () => {
             className="text-6xl lg:text-9xl font-semibold text-center"
             style={{
               textDecoration: 'underline',
-              textDecorationColor: '#8b7283',//'#fccf00', // "#8ae9c1",
+              textDecorationColor: '#8b7283',
             }}
           >
             ABOUT
@@ -137,7 +162,7 @@ const IndexPage: FC = () => {
             className="text-3xl lg:text-5xl font-semibold"
             style={{
               textDecoration: 'underline',
-              textDecorationColor: '#8b7283',//'#fccf00', // "#8ae9c1",
+              textDecorationColor: '#8b7283', // '#fccf00', // "#8ae9c1",
             }}
           >
             TRACKS
@@ -196,7 +221,7 @@ const IndexPage: FC = () => {
             className="text-3xl lg:text-5xl font-semibold text-center"
             style={{
               textDecoration: 'underline',
-              textDecorationColor: '#8b7283',//'#fccf00', // "#8ae9c1",
+              textDecorationColor: '#8b7283', // '#fccf00', // "#8ae9c1",
             }}
           >
             FAQ
@@ -223,20 +248,20 @@ const IndexPage: FC = () => {
             className="text-3xl lg:text-5xl font-semibold"
             style={{
               textDecoration: 'underline',
-              textDecorationColor: '#8b7283',//'#fccf00', // "#8ae9c1",
+              textDecorationColor: '#8b7283', // '#fccf00', // "#8ae9c1",
             }}
           >
             SPONSORS
           </h2>
-          <div  id="sponsor-interest" className="container mx-auto text-center py-120">
+          <div id="sponsor-interest" className="container mx-auto text-center py-120">
             <h2 className="font-semibold text-center">
-            INTERESTED IN SPONSORING MAKEUC? <br />
-            CONTACT US AT{' '}
-              <a href="mailto:contact@makeuc.io" style={{color: '#fff'}}>
-              <u>CONTACT@MAKEUC.IO</u>
+              INTERESTED IN SPONSORING MAKEUC? <br />
+              CONTACT US AT{' '}
+              <a href="mailto:contact@makeuc.io" style={{ color: '#fff' }}>
+                <u>CONTACT@MAKEUC.IO</u>
               </a>
             </h2>
-          {/* <Card className="is-centered is-rounded m-4 bg-white">
+            {/* <Card className="is-centered is-rounded m-4 bg-white">
               <a href="mailto:contact@makeuc.io">
                 <Button size="lg" className="text-md font-bold is-centered">
                 CONTACT US
@@ -249,7 +274,7 @@ const IndexPage: FC = () => {
               </a>
             </p>
           </Card> */}
-           </div>
+          </div>
           <div className="container mx-auto grid sm:grid-cols-1">
             <div className="mt-12 text-center text-black sm:grid-cols-1">
               <Card className="is-centered is-rounded m-4 bg-white">
