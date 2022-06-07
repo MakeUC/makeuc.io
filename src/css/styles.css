@@ -10,18 +10,22 @@
 @import '../../node_modules/@syncfusion/ej2-react-schedule/styles/material.css';
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+@font-face {
+  font-family: Quantum;
+  src: local('Quantum'), url(../assets/fonts/Quantum.otf) format('opentype');
+}
+
 main {
   background-image: url('./background.png');
   background-size: 1000px;
   color: theme('colors.white');
   font-family: 'Montserrat';
   font-weight: bold;
-  font-size: 12px
+  font-size: 12px;
 }
 
 body {
   background-color: #212121;
-
 }
 
 .navbar {
@@ -40,8 +44,7 @@ body {
 .navbar .nav-link {
   font-weight: bold;
   font-size: 30px;
-  color:theme('colors.white');
-
+  color: theme('colors.white');
 }
 
 .navbar .nav-link:hover {
@@ -50,13 +53,11 @@ body {
 
 .social-icon {
   font-size: 20px;
-
 }
 
 .register-form input,
 .register-form select {
   color: theme('colors.black');
-  
 }
 
 .register-form input[type='file'] {
@@ -109,7 +110,6 @@ body {
 
 #ghost {
   display: none;
-
 }
 
 footer {
@@ -123,13 +123,11 @@ a:hover {
 #logo {
   max-width: auto;
   height: auto;
-
 }
 
 .schedule-bg {
   background-color: $purple-white !important;
   font-size: 25px;
-
 }
 
 table tr:nth-child(2n + 2) {
@@ -146,7 +144,6 @@ table tr:nth-child(2n + 2) {
 .schedule-date-time {
   width: 1.5rem !important;
   font-size: 25px;
-
 }
 
 .schedule-name {

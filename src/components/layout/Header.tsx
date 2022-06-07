@@ -41,6 +41,11 @@ const Nav = styled.nav`
     }
   }
 
+  @media screen and (max-width: 800px) {
+    > *:nth-child(2) {
+      display: none;
+    }
+  }
 `;
 
 const Header: FC<HeaderProps> = ({ page = 'index' }) => {
@@ -63,43 +68,43 @@ const Header: FC<HeaderProps> = ({ page = 'index' }) => {
   });
 
   return (
-      <Nav>
-        <Link to="/">
-          <LogoIcon />
-        </Link>
-        <div>
-          {page === 'index' && (
-            <>
-              <AnchorLink className="px-4 xs:px-2 nav-link" href="#about">
-                ABOUT
-              </AnchorLink>
-              <AnchorLink className="px-4 xs:px-2 nav-link" href="#tracks">
-                TRACKS
-              </AnchorLink>
-              <AnchorLink className="px-4 xs:px-2 nav-link" href="#faq">
-                FAQ
-              </AnchorLink>
-              <AnchorLink className="px-4 xs:px-2 nav-link" href="#sponsors">
-                SPONSORS
-              </AnchorLink>
-            </>
-          )}
-        </div>
-        <div>
-          &nbsp;
-          {page === 'index' && (
-            <></>
-            
-            // <Link to="https://makeuc-2022.devpost.com/">
-            //   <Button className="text-sm font-bold">DEVPOST</Button>
-            // </Link>
+    <Nav>
+      <Link to="/">
+        <LogoIcon />
+      </Link>
+      <div>
+        {page === 'index' && (
+          <>
+            <AnchorLink className="px-4 xs:px-2 nav-link" href="#about">
+              ABOUT
+            </AnchorLink>
+            <AnchorLink className="px-4 xs:px-2 nav-link" href="#tracks">
+              TRACKS
+            </AnchorLink>
+            <AnchorLink className="px-4 xs:px-2 nav-link" href="#faq">
+              FAQ
+            </AnchorLink>
+            <AnchorLink className="px-4 xs:px-2 nav-link" href="#sponsors">
+              SPONSORS
+            </AnchorLink>
+          </>
+        )}
+      </div>
+      <div>
+        &nbsp;
+        {page === 'index' && (
+          <></>
 
-            // <Link to="/register">
-            //   <Button className="text-sm font-bold">REGISTER</Button>
-            // </Link>
-          )}
-        </div>
-        {/* <a
+          // <Link to="https://makeuc-2022.devpost.com/">
+          //   <Button className="text-sm font-bold">DEVPOST</Button>
+          // </Link>
+
+          // <Link to="/register">
+          //   <Button className="text-sm font-bold">REGISTER</Button>
+          // </Link>
+        )}
+      </div>
+      {/* <a
         id="mlh-trust-badge"
         className="flex"
         style={{
@@ -122,7 +127,7 @@ const Header: FC<HeaderProps> = ({ page = 'index' }) => {
           style={{ width: '100%' }}
         />
       </a> */}
-      </Nav>
+    </Nav>
   );
 };
 
