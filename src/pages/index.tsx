@@ -7,14 +7,15 @@ import Card from '../components/Card';
 import Layout from '../components/layout/Layout';
 import SectionHeader from '../components/SectionHeader';
 import SEO from '../components/SEO';
-import HeaderImg from '../images/header_title_image.png';
+import HeaderFunImg from '../images/header_fun_image.png';
+import HeaderTitleImg from '../images/header_title_image.png';
 
 const TitleContainer = styled.div`
   display: flex;
   width: 100%;
   margin-top: 4em;
-  align-items: flex-end;
-  align-content: flex-end;
+  align-items: center;
+  align-content: center;
   justify-content: space-between;
 
   @media screen and (max-width: 800px) {
@@ -22,11 +23,12 @@ const TitleContainer = styled.div`
     align-items: center;
     align-content: center;
 
-    * {
+    > * {
       display: flex;
       flex-direction: column;
       align-items: center;
       align-content: center;
+      text-align: center;
     }
 
     > :last-child {
@@ -92,12 +94,7 @@ const IndexPage: FC = () => {
         <div className="container mx-auto px-8 lg:flex">
           <TitleContainer>
             <div>
-              <h1
-                className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none"
-                style={{ fontFamily: 'Quantum' }}
-              >
-                MAKEUC 2022
-              </h1>
+              <img src={HeaderTitleImg} alt="MakeUC" />
               <p className="text-xl lg:text-3xl mt-6 font-light" style={mediumFontStyle}>
                 MAKE YOUR WORLD <br />
                 <strong>OCTOBER 22-23, 2022</strong>
@@ -110,12 +107,12 @@ const IndexPage: FC = () => {
                 </Link>
               </p>
             </div>
-            <div>
+            <div className="md:ml-12">
               <img
-                className="m-auto"
-                style={{ width: '90%' }}
-                src={HeaderImg}
-                alt="MakeUC Header"
+                className="ml-auto mr-2"
+                style={{ width: '75%' }}
+                src={HeaderFunImg}
+                alt="MakeUC Decoration"
               />
             </div>
           </TitleContainer>
