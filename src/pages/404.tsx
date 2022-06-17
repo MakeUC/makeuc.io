@@ -1,24 +1,21 @@
 import { Link } from 'gatsby';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Button from '../components/Button';
 import FooterImage from '../components/FooterImage';
+import Footer from '../components/layout/Footer';
 import SEO from '../components/SEO';
-import pacman from '../svg/pacman404.png';
+import { PageContainer } from './StyledComponents';
 
 const Error404Page: FC = () => (
-  <>
+  <PageContainer>
     <SEO />
     <main>
       <section className="pt-20 md:pt-40">
         <div className="container mx-auto px-8 lg:flex">
           <div className="text-center lg:text-left">
-            <h1 className="text-404 font-bold leading-none">
-              4
-              <img className="m-auto moon-404" src={pacman} alt="Moon" />
-              4!
-            </h1>
+            <h1 className="text-404 font-bold leading-none">404!</h1>
             <p className="text-xl lg:text-3xl mt-6 font-light">
-              It looks like the page you&amp;re searching for does not exist.
+              It looks like the page you&apos;re searching for does not exist.
             </p>
             <p className="text-sm mt-6 font-light">
               Impossible. Perhaps the website is incomplete?
@@ -35,6 +32,7 @@ const Error404Page: FC = () => (
       </section>
       <FooterImage />
     </main>
-  </>
+    <Footer />
+  </PageContainer>
 );
 export default Error404Page;

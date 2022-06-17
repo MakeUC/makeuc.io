@@ -1,10 +1,12 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Button from '../components/Button';
 import FooterImage from '../components/FooterImage';
+import Footer from '../components/layout/Footer';
 import SEO from '../components/SEO';
+import { PageContainer } from './StyledComponents';
 
 const ClaimPage: FC = () => (
-  <>
+  <PageContainer>
     <SEO />
     <main>
       <section className="pt-20 md:pt-40">
@@ -28,6 +30,7 @@ const ClaimPage: FC = () => (
       </section>
       <FooterImage />
     </main>
-  </>
+    <Footer />
+  </PageContainer>
 );
 export default ClaimPage;

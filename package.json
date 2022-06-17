@@ -21,6 +21,7 @@
     "gatsby": "^4.13.1",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-prettier-eslint": "^1.0.6",
+    "gatsby-plugin-provide-react": "^1.0.2",
     "gatsby-plugin-sharp": "^4.13.0",
     "gatsby-plugin-styled-components": "^5.13.0",
     "gatsby-source-filesystem": "^4.13.0",

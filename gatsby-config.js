@@ -113,6 +113,7 @@ module.exports = {
         path: `${__dirname}/images`,
       },
     },
+    'gatsby-plugin-provide-react',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {

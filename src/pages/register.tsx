@@ -13,6 +13,7 @@ import { Questions as TooltipQuestions, Resume as TooltipResume } from '../compo
 import { RegistrantDTO } from '../data/registrant.dto';
 
 import regData from '../../content/registration.yaml';
+import { PageContainer } from './StyledComponents';
 
 const apiUrl = process.env.GATSBY_API_URL || 'https://makeuc-registration-dev.herokuapp.com';
 
@@ -66,7 +67,7 @@ const RegisterPage: FC = () => {
   };
 
   return (
-    <>
+    <PageContainer>
       <SEO />
       <main>
         <Header page="register" />
@@ -538,7 +539,7 @@ const RegisterPage: FC = () => {
         <FooterImage />
       </main>
       <Footer />
-    </>
+    </PageContainer>
   );
 };
 export default RegisterPage;
