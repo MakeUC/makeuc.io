@@ -137,12 +137,12 @@ const IndexPage: FC = () => {
                 </p>
               </Card>
               <Card className="m-4 bg-white text-center is-centered is-rounded">
-                <h1 className="text-2xl font-semibold text-black">CHANGES TO MAKE UC</h1>
+                <h1 className="text-2xl font-semibold text-black">MAKEUC COVID-19 POLICY</h1>
                 <br />
                 <p style={{ fontSize: '20px' }}>
-                  As we begin to move forward into 2022, MakeUC is proud to announce that we will be
-                  open to partial in-person attendance! Information on in-person attendance will be
-                  released in the near future.
+                  MakeUC is committed to following the strictest guidance available at the school and/or
+                  local level. We currently encourage, but do not require, masks and COVID-19 vaccinations
+                  for in-person hackers. This policy is subject to revision as guidelines change.
                 </p>
               </Card>
             </div>
