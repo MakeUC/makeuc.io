@@ -5,11 +5,11 @@ import Accordion from '../components/Accordion';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import Layout from '../components/layout/Layout';
+import { PageContainer } from '../components/PageStyles/StyledComponents';
 import SectionHeader from '../components/SectionHeader';
 import SEO from '../components/SEO';
 import HeaderFunImg from '../images/header_fun_image.png';
 import HeaderTitleImg from '../images/header_title_image.png';
-import { PageContainer } from './StyledComponents';
 
 const TitleContainer = styled.div`
   display: flex;

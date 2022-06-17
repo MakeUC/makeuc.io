@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import BackgroundImage from '../images/background.png';
+import BackgroundImage from '../../images/background.png';
 
-import { FooterContainer } from '../components/layout/StyledComponents';
+import { FooterContainer } from '../layout/StyledComponents';
 
 export const PageContainer = styled.div`
   display: flex;

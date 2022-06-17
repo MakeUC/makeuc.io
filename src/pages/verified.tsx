@@ -3,8 +3,8 @@ import { FC } from 'react';
 import Button from '../components/Button';
 import FooterImage from '../components/FooterImage';
 import Footer from '../components/layout/Footer';
+import { PageContainer } from '../components/PageStyles/StyledComponents';
 import SEO from '../components/SEO';
-import { PageContainer } from './StyledComponents';
 
 const VerifiedPage: FC = () => (
   <PageContainer>
