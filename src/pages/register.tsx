@@ -1,12 +1,19 @@
 import React, { FC, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { useForm } from 'react-hook-form';
+import { FaSpinner } from 'react-icons/fa';
+
+import Button from '../components/Button';
 import Card from '../components/Card';
 import FooterImage from '../components/FooterImage';
 import Footer from '../components/layout/Footer';
 import Header from '../components/layout/Header';
 import SEO from '../components/SEO';
+import { Questions as TooltipQuestions, Resume as TooltipResume } from '../components/ToolTips';
 import { RegistrantDTO } from '../data/registrant.dto';
+
+import regData from '../../content/registration.yaml';
+import { PageContainer } from '../components/PageStyles/StyledComponents';
 
 const apiUrl = process.env.GATSBY_API_URL || 'https://makeuc-registration-dev.herokuapp.com';
 
@@ -60,7 +67,7 @@ const RegisterPage: FC = () => {
   };
 
   return (
-    <>
+    <PageContainer>
       <SEO />
       <main>
         <Header page="register" />
@@ -79,34 +86,63 @@ const RegisterPage: FC = () => {
               <div className="flex-1 px-3">
                 {/* <Card className="mb-0 is-dark is-rounded"> */}
                 {/* Comment this out when registration is closed and live site is up */}
-                {/* {(result === SUCCESS) ?
-                  <div className="flex items-center bg-secondary-darker text-black text-sm font-bold px-4 py-3" role="alert">
-                    <p>We have sent you a confirmation email. In order to complete the sign-up process,
-                      please click on the confirmation link. It might have landed in your spam folder.</p>
-                  </div> :
+                {result === SUCCESS ? (
+                  <Card className="m-4 bg-white text-center is-centered is-rounded">
+                    <p style={{ fontSize: '20px', color: '#000' }}>
+                      We have sent you a confirmation email. In order to complete the sign-up
+                      process, please click on the confirmation link. It might have landed in your
+                      spam folder.
+                    </p>
+                  </Card>
+                ) : (
                   <>
-                    {
-                      (result === ALREADY_EXISTS) ?
-                        <div className="flex items-center bg-red-700 text-white text-sm font-bold px-4 py-3" role="alert">
-                          <p>
-                            This email has already been registered with us. If you have not received a confirmation email, please contact us at <a href="mailto:info@makeuc.io" className="text-secondary">info@makeuc.io</a>
-                          </p>
-                        </div> :
-                      (result === SERVER_ERROR) ?
-                        <div className="flex items-center bg-red-700 text-white text-sm font-bold px-4 py-3" role="alert">
-                          <p>
-                            There was a problem with the registration, please try again or contact us at <a href="mailto:info@makeuc.io" className="text-secondary">info@makeuc.io</a>
-                          </p>
-                        </div> : ''
-                    }
-                    <br />
-                    <form className="w-full max-w-5xl mx-auto register-form" onSubmit={handleSubmit(onSubmit)}>
-                      <div className="mb-4 text-left">
-                        <label
-                          className="block text-sm font-bold mb-2"
-                          htmlFor="fullName"
+                    {result === ALREADY_EXISTS ? (
+                      <div
+                        className="flex items-center bg-red-700 text-white text-sm font-bold px-4 py-3"
+                        role="alert"
+                      >
+                        <p>
+                          This email has already been registered with us. If you have not received a
+                          confirmation email, please contact us at{' '}
+                          <a href="mailto:info@makeuc.io" className="text-secondary">
+                            info@makeuc.io
+                          </a>
+                        </p>
+                      </div>
+                    ) : (
+                      result === SERVER_ERROR && (
+                        <div
+                          className="flex items-center bg-red-700 text-white text-sm font-bold px-4 py-3"
+                          role="alert"
                         >
-                          Full Name (First Name + Last Name){errors.fullName && <span className="text-red-500 text-xs italic">&nbsp;&nbsp;required field</span>}{result === NAME_ERROR && <span className="text-red-500 text-xs italic">&nbsp;&nbsp;Please include your first and last name</span>}
+                          <p>
+                            There was a problem with the registration, please try again or contact
+                            us at{' '}
+                            <a href="mailto:info@makeuc.io" className="text-secondary">
+                              info@makeuc.io
+                            </a>
+                          </p>
+                        </div>
+                      )
+                    )}
+                    <br />
+                    <form
+                      className="w-full max-w-5xl mx-auto register-form"
+                      onSubmit={handleSubmit(onSubmit)}
+                    >
+                      <div className="mb-4 text-left">
+                        <label className="block text-sm font-bold mb-2" htmlFor="fullName">
+                          Full Name (First Name + Last Name)
+                          {errors.fullName && (
+                            <span className="text-red-500 text-xs italic">
+                              &nbsp;&nbsp;required field
+                            </span>
+                          )}
+                          {result === NAME_ERROR && (
+                            <span className="text-red-500 text-xs italic">
+                              &nbsp;&nbsp;Please include your first and last name
+                            </span>
+                          )}
                         </label>
                         <input
                           ref={register({ required: true })}
@@ -117,8 +153,30 @@ const RegisterPage: FC = () => {
                         />
                       </div>
                       <div className="mb-4 text-left">
+                        <label className="block text-sm font-bold mb-2" htmlFor="fullName">
+                          Age
+                          {errors.age && (
+                            <span className="text-red-500 text-xs italic">
+                              &nbsp;&nbsp;required field
+                            </span>
+                          )}
+                        </label>
+                        <input
+                          ref={register({ required: true })}
+                          className="shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
+                          name="age"
+                          type="number"
+                          placeholder="19"
+                        />
+                      </div>
+                      <div className="mb-4 text-left">
                         <label className="block text-sm font-bold mb-2" htmlFor="email">
-                          Email{errors.email && <span className="text-red-500 text-xs italic">&nbsp;&nbsp;required field</span>}
+                          Email
+                          {errors.email && (
+                            <span className="text-red-500 text-xs italic">
+                              &nbsp;&nbsp;required field
+                            </span>
+                          )}
                         </label>
                         <input
                           ref={register({ required: true })}
@@ -130,7 +188,12 @@ const RegisterPage: FC = () => {
                       </div>
                       <div className="mb-4 text-left">
                         <label className="block text-sm font-bold mb-2" htmlFor="phone">
-                          Phone Number{errors.phone && <span className="text-red-500 text-xs italic">&nbsp;&nbsp;required field</span>}
+                          Phone Number
+                          {errors.phone && (
+                            <span className="text-red-500 text-xs italic">
+                              &nbsp;&nbsp;required field
+                            </span>
+                          )}
                         </label>
                         <input
                           ref={register({ required: true })}
@@ -142,7 +205,12 @@ const RegisterPage: FC = () => {
                       </div>
                       <div className="mb-4 text-left">
                         <label className="block text-sm font-bold mb-2" htmlFor="school">
-                          School{errors.school && <span className="text-red-500 text-xs italic">&nbsp;&nbsp;required field</span>}
+                          School
+                          {errors.school && (
+                            <span className="text-red-500 text-xs italic">
+                              &nbsp;&nbsp;required field
+                            </span>
+                          )}
                         </label>
                         <input
                           ref={register({ required: true })}
@@ -153,15 +221,21 @@ const RegisterPage: FC = () => {
                           list="schools"
                         />
                         <datalist id="schools">
-                          {regData.schools.map(school => <option key={school} value={school}>{school}</option>)}
+                          {regData.schools.map(school => (
+                            <option key={school} value={school}>
+                              {school}
+                            </option>
+                          ))}
                         </datalist>
                       </div>
                       <div className="mb-4 text-left">
-                        <label
-                          className="block text-sm font-bold mb-2"
-                          htmlFor="country"
-                        >
-                          Country{errors.country && <span className="text-red-500 text-xs italic">&nbsp;&nbsp;required field</span>}
+                        <label className="block text-sm font-bold mb-2" htmlFor="country">
+                          Country
+                          {errors.country && (
+                            <span className="text-red-500 text-xs italic">
+                              &nbsp;&nbsp;required field
+                            </span>
+                          )}
                         </label>
                         <select
                           ref={register({ required: true })}
@@ -169,13 +243,22 @@ const RegisterPage: FC = () => {
                           className="shadow appearance-none border w-full rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                         >
                           <option value="">Select an option</option>
-                          {regData.countries.map(country => <option key={country} value={country}>{country}</option>)}
+                          {regData.countries.map(country => (
+                            <option key={country} value={country}>
+                              {country}
+                            </option>
+                          ))}
                         </select>
                       </div>
 
                       <div className="mb-4 text-left">
                         <label className="block text-sm font-bold mb-2" htmlFor="degree">
-                          Degree{errors.degree && <span className="text-red-500 text-xs italic">&nbsp;&nbsp;required field</span>}
+                          Degree
+                          {errors.degree && (
+                            <span className="text-red-500 text-xs italic">
+                              &nbsp;&nbsp;required field
+                            </span>
+                          )}
                         </label>
                         <input
                           ref={register({ required: true })}
@@ -186,12 +269,21 @@ const RegisterPage: FC = () => {
                           list="degrees"
                         />
                         <datalist id="degrees">
-                          {regData.degrees.map(degree => <option key={degree} value={degree}>{degree}</option>)}
+                          {regData.degrees.map(degree => (
+                            <option key={degree} value={degree}>
+                              {degree}
+                            </option>
+                          ))}
                         </datalist>
                       </div>
                       <div className="mb-4 text-left">
                         <label className="block text-sm font-bold mb-2" htmlFor="degree">
-                          Major(s){errors.major && <span className="text-red-500 text-xs italic">&nbsp;&nbsp;required field</span>}
+                          Major(s)
+                          {errors.major && (
+                            <span className="text-red-500 text-xs italic">
+                              &nbsp;&nbsp;required field
+                            </span>
+                          )}
                         </label>
                         <input
                           ref={register({ required: true })}
@@ -202,15 +294,21 @@ const RegisterPage: FC = () => {
                           list="majors"
                         />
                         <datalist id="majors">
-                          {regData.majors.map(major => <option key={major} value={major}>{major}</option>)}
+                          {regData.majors.map(major => (
+                            <option key={major} value={major}>
+                              {major}
+                            </option>
+                          ))}
                         </datalist>
                       </div>
                       <div className="mb-4 text-left">
-                        <label
-                          className="block text-sm font-bold mb-2"
-                          htmlFor="graduation"
-                        >
-                          Expected Graduation Year{errors.graduation && <span className="text-red-500 text-xs italic">&nbsp;&nbsp;required field</span>}
+                        <label className="block text-sm font-bold mb-2" htmlFor="graduation">
+                          Expected Graduation Year
+                          {errors.graduation && (
+                            <span className="text-red-500 text-xs italic">
+                              &nbsp;&nbsp;required field
+                            </span>
+                          )}
                         </label>
                         <input
                           ref={register({ required: true })}
@@ -228,7 +326,12 @@ const RegisterPage: FC = () => {
                           className="block text-sm font-bold mb-2"
                           htmlFor="hackathonsAttended"
                         >
-                          Number of Hackathons Attended{errors.hackathonsAttended && <span className="text-red-500 text-xs italic">&nbsp;&nbsp;required field</span>}
+                          Number of Hackathons Attended
+                          {errors.hackathonsAttended && (
+                            <span className="text-red-500 text-xs italic">
+                              &nbsp;&nbsp;required field
+                            </span>
+                          )}
                         </label>
                         <select
                           ref={register({ required: true })}
@@ -236,30 +339,35 @@ const RegisterPage: FC = () => {
                           className="shadow appearance-none border w-full rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                         >
                           <option value="">Select an option</option>
-                          {regData.hackathonsAttended.map(option => <option key={option} value={option}>{option}</option>)}
+                          {regData.hackathonsAttended.map(option => (
+                            <option key={option} value={option}>
+                              {option}
+                            </option>
+                          ))}
                         </select>
                       </div>
                       <div className="mb-4 text-left">
-                        <label
-                          className="block text-sm font-bold mb-2"
-                          htmlFor="resume"
-                        >
-                          Resume - <i>Optional</i><tooltip.Resume />
+                        <label className="block text-sm font-bold mb-2" htmlFor="resume">
+                          Resume - <i>Optional</i>
+                          <TooltipResume />
                         </label>
-                        <div {...getRootProps({ className: `dropzone` })}>
+                        <div {...getRootProps({ className: 'dropzone' })}>
                           <input {...getInputProps()} />
-                          <span className="text-sm italic">{
-                            acceptedFiles.length ? acceptedFiles[0].name :
-                            `Drop your file in here, or click to browse (PDF only)`
-                          }</span>
+                          <span className="text-sm italic">
+                            {acceptedFiles.length
+                              ? acceptedFiles[0].name
+                              : 'Drop your file in here, or click to browse (PDF only)'}
+                          </span>
                         </div>
                       </div>
                       <div className="mb-4 text-left">
-                        <label
-                          className="block text-sm font-bold mb-2"
-                          htmlFor="ethnicity"
-                        >
-                          Ethnicity{errors.ethnicity && <span className="text-red-500 text-xs italic">&nbsp;&nbsp;required field</span>}
+                        <label className="block text-sm font-bold mb-2" htmlFor="ethnicity">
+                          Ethnicity
+                          {errors.ethnicity && (
+                            <span className="text-red-500 text-xs italic">
+                              &nbsp;&nbsp;required field
+                            </span>
+                          )}
                         </label>
                         <select
                           ref={register({ required: true })}
@@ -267,12 +375,21 @@ const RegisterPage: FC = () => {
                           className="shadow appearance-none border w-full rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                         >
                           <option value="">Select an option</option>
-                          {regData.ethnicities.map(ethnicity => <option key={ethnicity} value={ethnicity}>{ethnicity}</option>)}
+                          {regData.ethnicities.map(ethnicity => (
+                            <option key={ethnicity} value={ethnicity}>
+                              {ethnicity}
+                            </option>
+                          ))}
                         </select>
                       </div>
                       <div className="mb-4 text-left">
                         <label className="block text-sm font-bold mb-2" htmlFor="gender">
-                          Gender{errors.gender && <span className="text-red-500 text-xs italic">&nbsp;&nbsp;required field</span>}
+                          Gender
+                          {errors.gender && (
+                            <span className="text-red-500 text-xs italic">
+                              &nbsp;&nbsp;required field
+                            </span>
+                          )}
                         </label>
                         <select
                           ref={register({ required: true })}
@@ -280,15 +397,17 @@ const RegisterPage: FC = () => {
                           className="shadow appearance-none border w-full rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                         >
                           <option value="">Select an option</option>
-                          {regData.genders.map(gender => <option key={gender} value={gender}>{gender}</option>)}
+                          {regData.genders.map(gender => (
+                            <option key={gender} value={gender}>
+                              {gender}
+                            </option>
+                          ))}
                         </select>
                       </div>
                       <div className="mb-4 text-left">
-                        <label
-                          className="block text-sm font-bold mb-2"
-                          htmlFor="questions"
-                        >
-                          Notes - <i>Optional</i><tooltip.Questions />
+                        <label className="block text-sm font-bold mb-2" htmlFor="questions">
+                          Notes - <i>Optional</i>
+                          <TooltipQuestions />
                         </label>
                         <input
                           ref={register}
@@ -298,7 +417,7 @@ const RegisterPage: FC = () => {
                           placeholder="Notes"
                         />
                       </div>
-                      <div className="text-left text-sm" style={{fontSize: "11px"}}>
+                      <div className="text-left text-sm" style={{ fontSize: '11px' }}>
                         <label>
                           <input
                             name="agreed"
@@ -306,18 +425,25 @@ const RegisterPage: FC = () => {
                             type="checkbox"
                             className="mr-2 leading-tight"
                           />
-                          I have read and agree to the <a
+                          I have read and agree to the{' '}
+                          <a
                             target="_blank"
-                            aria-label = "Code of Conduct"
+                            aria-label="Code of Conduct"
                             rel="noopener noreferrer"
                             className="light-link"
                             href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
                           >
-                            MLH Code of Conduct</a>.
+                            MLH Code of Conduct
+                          </a>
+                          .
                         </label>
-                        {errors.agreed && <span className="text-red-500 font-bold text-xs italic">&nbsp;&nbsp;Please check this box</span>}
+                        {errors.agreed && (
+                          <span className="text-red-500 font-bold text-xs italic">
+                            &nbsp;&nbsp;Please check this box
+                          </span>
+                        )}
                       </div>
-                      <div className="text-left text-sm" style={{fontSize: "11px"}}>
+                      <div className="text-left text-sm" style={{ fontSize: '11px' }}>
                         <label>
                           <input
                             name="authorized"
@@ -325,33 +451,48 @@ const RegisterPage: FC = () => {
                             type="checkbox"
                             className="mr-2 leading-tight"
                           />
-                          I authorize you to share my application/registration information for event administration, ranking, MLH administration,
-                          pre and post-event informational e-mails, and occasional messages about hackathons in-line with the <a
+                          I authorize you to share my application/registration information for event
+                          administration, ranking, MLH administration, pre and post-event
+                          informational e-mails, and occasional messages about hackathons in-line
+                          with the{' '}
+                          <a
                             target="_blank"
-                            aria-label = "MLH Privacy Policy"
+                            aria-label="MLH Privacy Policy"
                             rel="noopener noreferrer"
                             className="light-link"
                             href="https://mlh.io/privacy"
                           >
-                          MLH Privacy Policy</a>. I further agree to the terms of both the <a
+                            MLH Privacy Policy
+                          </a>
+                          . I further agree to the terms of both the{' '}
+                          <a
                             target="_blank"
-                            aria-label = "MLH Contest Terms and Conditions"
+                            aria-label="MLH Contest Terms and Conditions"
                             rel="noopener noreferrer"
                             className="light-link"
                             href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions"
                           >
-                          MLH Contest Terms and Conditions</a> and the <a
+                            MLH Contest Terms and Conditions
+                          </a>{' '}
+                          and the{' '}
+                          <a
                             target="_blank"
-                            aria-label = "MLH Privacy Policy"
+                            aria-label="MLH Privacy Policy"
                             rel="noopener noreferrer"
                             className="light-link"
                             href="https://mlh.io/privacy"
                           >
-                            MLH Privacy Policy</a>.
+                            MLH Privacy Policy
+                          </a>
+                          .
                         </label>
-                        {errors.authorized && <span className="text-red-500 font-bold text-xs italic">&nbsp;&nbsp;Please check this box</span>}
+                        {errors.authorized && (
+                          <span className="text-red-500 font-bold text-xs italic">
+                            &nbsp;&nbsp;Please check this box
+                          </span>
+                        )}
                       </div>
-                      <div className="text-left text-sm" style={{fontSize: "11px"}}>
+                      <div className="text-left text-sm" style={{ fontSize: '11px' }}>
                         <label>
                           <input
                             name="communication"
@@ -359,9 +500,14 @@ const RegisterPage: FC = () => {
                             type="checkbox"
                             className="mr-2 leading-tight"
                           />
-                          I authorize MLH to send me pre- and post-event informational e-mails, which contain free credit and opportunities from their partners.
+                          I authorize MLH to send me pre- and post-event informational e-mails,
+                          which contain free credit and opportunities from their partners.
                         </label>
-                        {errors.communication && <span className="text-red-500 font-bold text-xs italic">&nbsp;&nbsp;Please check this box</span>}
+                        {errors.communication && (
+                          <span className="text-red-500 font-bold text-xs italic">
+                            &nbsp;&nbsp;Please check this box
+                          </span>
+                        )}
                       </div>
                       <div className="md:items-center py-20 lg:pb-20 lg:pt-10">
                         <Button
@@ -370,22 +516,22 @@ const RegisterPage: FC = () => {
                           className="shadow focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                           disabled={submitting}
                         >
-                          {submitting ? <FaSpinner className="spinner" /> : `REGISTER`}
+                          {submitting ? <FaSpinner className="spinner" /> : 'REGISTER'}
                         </Button>
                       </div>
                     </form>
                   </>
-                } */}
-                {/* </Card> */}
+                )}
+                {/* </Card>
 
                 {/* Comment this out when registration opens up */}
-                <div className="text-left text-black">
+                {/* <div className="text-left text-black">
                   <Card className="m-4 bg-white text-center is-centered is-rounded">
                     <p style={{ fontSize: '20px' }}>
                       Registration is closed for now, please check us out soon!
                     </p>
                   </Card>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -393,7 +539,7 @@ const RegisterPage: FC = () => {
         <FooterImage />
       </main>
       <Footer />
-    </>
+    </PageContainer>
   );
 };
 export default RegisterPage;

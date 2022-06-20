@@ -1,9 +1,10 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { IconContext } from 'react-icons';
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FooterContainer } from './StyledComponents';
 
 const Footer: FC = () => (
-  <>
+  <FooterContainer>
     <footer className="container mx-auto py-6 px-3 mb-0 flex">
       <IconContext.Provider value={{ size: '2em', className: 'mx-auto' }}>
         <a
@@ -80,7 +81,7 @@ const Footer: FC = () => (
         {/* <img src="ieee.png" style={{height:"50px", whitespace:"nowrap", display:"inline"}}></img> */}
       </a>
     </div>
-  </>
+  </FooterContainer>
 );
 
 export default Footer;

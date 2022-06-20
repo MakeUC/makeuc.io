@@ -6372,6 +6372,11 @@ gatsby-plugin-prettier-eslint@^1.0.6:
     lodash.mergewith "^4.6.2"
     picomatch "^2.2.2"
 
+gatsby-plugin-provide-react@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-provide-react/-/gatsby-plugin-provide-react-1.0.2.tgz#e50bb311cd8ef5855c6d94f708266ab117c77a15"
+  integrity sha512-Zkbs0uiniXDvtGT86+bTCdj0cuT9REpGJxJTIKLQJW3AvmAdh/MAMwWzMdyMrX1cwjqDPZBFC7bw7A49iP/fyw==
+
 gatsby-plugin-purgecss@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npmjs.org/gatsby-plugin-purgecss/-/gatsby-plugin-purgecss-4.0.1.tgz"
