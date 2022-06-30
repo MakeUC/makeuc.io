@@ -21,7 +21,7 @@ module.exports = {
       },
       {
         title: 'GLOBAL CONNECTIVITY',
-        content: `Branch out and explore new ways to build connections between people from all over the world. Whether it\'s 
+        content: `Branch out and explore new ways to build connections between people from all over the world. Whether it's 
         between cities, countries, or continents, we all need ways to connect with one another.`,
       },
     ],
@@ -59,7 +59,7 @@ module.exports = {
       },
       {
         question: 'HOW DO I FORM TEAMS?',
-        answer: `Teams are formed at the event (we will be having a team formation segment), but you\'re free to organize 
+        answer: `Teams are formed at the event (we will be having a team formation segment), but you're free to organize 
         before the event if all participants are registered. Team size must be between 1 and 4 people.`,
       },
       {
@@ -80,6 +80,7 @@ module.exports = {
     ],
     sponsors: [
       [],
+
       // L
       [],
       [],
@@ -87,10 +88,24 @@ module.exports = {
       // M
       [
         {
+          link: 'https://www.siemens.com/global/en.html',
+          src: 'siemens.svg',
+          imageHeight: '52px',
+          className: 'pr-4 partner',
+          alt: 'Siemens',
+        },
+        {
+          link: 'https://cloud.google.com/',
+          src: 'google-cloud.svg',
+          imageHeight: '53px',
+          className: 'px-4 partner',
+          alt: 'Google Cloud',
+        },
+        {
           link: 'https://www.gather.town/',
           src: 'gather70.png',
           imageHeight: '70px',
-          className: 'px-4 partner',
+          className: 'pl-4 partner',
           alt: 'Gather Town',
         },
       ],
