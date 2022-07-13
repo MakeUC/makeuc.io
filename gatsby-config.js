@@ -108,10 +108,39 @@ module.exports = {
           className: 'pl-4 partner',
           alt: 'Gather Town',
         },
+        {
+          link: 'https://www.marathonpetroleum.com/',
+          src: 'marathon112.jpg',
+          imageHeight: '112px',
+          className: 'mt-2 partner',
+          alt: 'Marathon',
+        },
       ],
 
       // S
-      [],
+      [
+        {
+          link: 'https://www.stickergiant.com/event-coupons?utm_source=website&utm_medium=event',
+          src: 'stickergiant31.png',
+          imageHeight: '31px',
+          className: 'partner',
+          alt: 'Sticker Giant',
+        },
+        {
+          link: 'https://mule.to/p345',
+          src: 'stickermule.svg',
+          imageHeight: '21px',
+          className: 'partner',
+          alt: 'Sticker Mule',
+        },
+        {
+          link: 'https://www.letsroam.com/',
+          src: 'letsroam.webp',
+          imageHeight: '21px',
+          className: 'partner',
+          alt: "Let's Roam",
+        },
+      ],
 
       // XS
       [],
