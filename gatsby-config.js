@@ -169,6 +169,13 @@ module.exports = {
           className: 'partner',
           alt: 'Wolfram',
         },
+        {
+          link: 'https://www.taskade.com/',
+          src: 'taskade.png',
+          imageHeight: '31px',
+          className: 'partner',
+          alt: 'Taskade',
+        },
       ],
 
       // XS
