@@ -82,7 +82,15 @@ module.exports = {
       [],
 
       // L
-      [],
+      [
+        {
+          link: 'https://www.lcs.com/careers/',
+          src: 'lcs.png',
+          imageHeight: '60px',
+          className: 'partner',
+          alt: 'LCS',
+        },
+      ],
       [],
 
       // M
@@ -129,16 +137,37 @@ module.exports = {
         {
           link: 'https://mule.to/p345',
           src: 'stickermule.svg',
-          imageHeight: '21px',
+          imageHeight: '31px',
           className: 'partner',
           alt: 'Sticker Mule',
         },
         {
           link: 'https://www.letsroam.com/',
           src: 'letsroam.webp',
-          imageHeight: '21px',
+          imageHeight: '31px',
           className: 'partner',
           alt: "Let's Roam",
+        },
+        {
+          link: 'https://www.axure.com/',
+          src: 'axure.svg',
+          imageHeight: '31px',
+          className: 'partner',
+          alt: 'Axure',
+        },
+        {
+          link: 'https://gen.xyz/',
+          src: 'gen-xyz.png',
+          imageHeight: '31px',
+          className: 'partner',
+          alt: 'Gen.xyz',
+        },
+        {
+          link: 'https://www.wolfram.com/hackathons/',
+          src: 'wolfram.svg',
+          imageHeight: '31px',
+          className: 'partner',
+          alt: 'Wolfram',
         },
       ],
 
