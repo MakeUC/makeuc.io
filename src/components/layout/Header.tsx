@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React, { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from 'styled-components';
 import LogoIcon from '../../svg/LogoIcon';
@@ -104,29 +104,28 @@ const Header: FC<HeaderProps> = ({ page = 'index' }) => {
           // </Link>
         )}
       </div>
-      {/* <a
+      <a
         id="mlh-trust-badge"
-        className="flex"
         style={{
           display: 'block',
           maxWidth: '100px',
-          minWidth: '40px',
+          minWidth: '60px',
           position: 'fixed',
-          left: '15px',
-          top: 0,
+          right: '50px',
+          top: '0',
           width: '10%',
           zIndex: '10000',
         }}
-        href="https://mlh.io/seasons/2022/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2022-season&utm_content=white"
-        target="_blank"
         rel="noreferrer"
+        href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=white"
+        target="_blank"
       >
         <img
-          src="https://s3.amazonaws.com/logged-assets/trust-badge/2022/mlh-trust-badge-2022-white.svg"
-          alt="Major League Hacking 2022 Hackathon Season"
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-white.svg"
+          alt="Major League Hacking 2023 Hackathon Season"
           style={{ width: '100%' }}
         />
-      </a> */}
+      </a>
     </Nav>
   );
 };
