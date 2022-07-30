@@ -451,10 +451,9 @@ const RegisterPage: FC = () => {
                             type="checkbox"
                             className="mr-2 leading-tight"
                           />
-                          I authorize you to share my application/registration information for event
-                          administration, ranking, MLH administration, pre and post-event
-                          informational e-mails, and occasional messages about hackathons in-line
-                          with the{' '}
+                          I authorize you to share my application/registration information with Major 
+                          League Hacking for event administration, ranking, and MLH administration 
+                          in-line with the{' '}
                           <a
                             target="_blank"
                             aria-label="MLH Privacy Policy"
@@ -470,7 +469,7 @@ const RegisterPage: FC = () => {
                             aria-label="MLH Contest Terms and Conditions"
                             rel="noopener noreferrer"
                             className="light-link"
-                            href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions"
+                            href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md"
                           >
                             MLH Contest Terms and Conditions
                           </a>{' '}
@@ -500,8 +499,8 @@ const RegisterPage: FC = () => {
                             type="checkbox"
                             className="mr-2 leading-tight"
                           />
-                          I authorize MLH to send me pre- and post-event informational e-mails,
-                          which contain free credit and opportunities from their partners.
+                          I authorize MLH to send me an email where I can further opt into the MLH Hacker, 
+                          Events, or Organizer Newsletters and other communications from MLH.
                         </label>
                         {errors.communication && (
                           <span className="text-red-500 font-bold text-xs italic">
