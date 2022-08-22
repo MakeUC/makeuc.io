@@ -252,7 +252,7 @@ const IndexPage: FC = () => {
                 <Card className="is-centered is-rounded m-4 bg-white">
                   {sponsors.map((category, index) => (
                     <>
-                      {!!index && index !== 6 && index !== 2 && <hr className="mt-5" />}{' '}
+                      {!!index && index !== 6 && index !== 2 && <hr />}{' '}
                       {/* this is absolutely disgusting */}
                       <div className="sm:mx-auto px-auto flex justify-center items-center content-around flex-wrap">
                         {category.map(sponsor => (
