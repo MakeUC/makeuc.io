@@ -79,9 +79,6 @@ module.exports = {
       },
     ],
     sponsors: [
-      [],
-
-      // L
       [
         {
           link: 'https://www.lcs.com/careers/',
@@ -103,6 +100,17 @@ module.exports = {
           imageHeight: '60px',
           className: 'px-4 pb-2 partner',
           alt: 'Medpace',
+        },
+      ],
+
+      // L
+      [
+        {
+          link: 'https://hii.com/careers/ ',
+          src: 'hii.jpg',
+          imageHeight: '60px',
+          className: 'px-4 partner',
+          alt: 'HII',
         },
       ],
       [],
@@ -189,6 +197,20 @@ module.exports = {
           imageHeight: '31px',
           className: 'partner',
           alt: 'Taskade',
+        },
+        {
+          link: 'http://hackp.ac/mlh-StandOutStickers-hackathons',
+          src: 'standout-stickers.png',
+          imageHeight: '31px',
+          className: 'partner',
+          alt: 'Standout Stickers',
+        },
+        {
+          link: 'https://www.echo3d.co/',
+          src: 'echo3d.png',
+          imageHeight: '31px',
+          className: 'partner',
+          alt: 'echo3D',
         },
       ],
 
