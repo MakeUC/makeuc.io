@@ -212,6 +212,13 @@ module.exports = {
           className: 'partner',
           alt: 'echo3D',
         },
+        {
+          link: 'https://www.chipotle.com/',
+          src: 'chipotle.svg',
+          imageHeight: '32px',
+          className: 'partner',
+          alt: 'Chipotle',
+        },
       ],
 
       // XS
