@@ -112,6 +112,13 @@ module.exports = {
           className: 'px-4 partner',
           alt: 'HII',
         },
+        {
+          link: 'https://www.northropgrumman.com/careers/',
+          src: 'northrop.svg',
+          imageHeight: '60px',
+          className: 'px-4 partner',
+          alt: 'Northrop Grumman',
+        },
       ],
       [],
 
