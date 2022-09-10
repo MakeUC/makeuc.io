@@ -112,6 +112,13 @@ module.exports = {
           className: 'px-4 partner',
           alt: 'HII',
         },
+        {
+          link: 'https://www.northropgrumman.com/careers/',
+          src: 'northrop.svg',
+          imageHeight: '60px',
+          className: 'px-4 partner',
+          alt: 'Northrop Grumman',
+        },
       ],
       [],
 
@@ -211,6 +218,13 @@ module.exports = {
           imageHeight: '31px',
           className: 'partner',
           alt: 'echo3D',
+        },
+        {
+          link: 'https://www.chipotle.com/',
+          src: 'chipotle.svg',
+          imageHeight: '32px',
+          className: 'partner',
+          alt: 'Chipotle',
         },
       ],
 

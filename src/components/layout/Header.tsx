@@ -1,8 +1,15 @@
+/* eslint-disable react/no-unused-prop-types */
 import { Link } from 'gatsby';
-import { FC, useEffect, useState } from 'react';
+import { FC, ReactNode, useEffect, useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from 'styled-components';
 import LogoIcon from '../../svg/LogoIcon';
+
+type SafeScrollLinkProps = {
+  path: string;
+  anchor: string;
+  children: ReactNode;
+};
 
 export type HeaderProps = {
   page?: string;
