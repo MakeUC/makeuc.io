@@ -107,6 +107,11 @@ const IndexPage: FC = () => {
                       REGISTER
                     </Button>
                   </Link>
+                  <Link to="/workshops" className="pl-4">
+                    <Button size="lg" className="font-sans text-md font-bold">
+                      WORKSHOPS
+                    </Button>
+                  </Link>
                 </p>
               </div>
               <div className="md:ml-12">

@@ -1,8 +1,30 @@
 import { Link } from 'gatsby';
-import { FC, useEffect, useState } from 'react';
+import { FC, ReactNode, useEffect, useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from 'styled-components';
 import LogoIcon from '../../svg/LogoIcon';
+
+type SafeScrollLinkProps = {
+  path: string;
+  anchor: string;
+  children: ReactNode;
+};
+
+const SafeScrollLink: FC<SafeScrollLinkProps> = ({ path, anchor, children }) => {
+  if (document.querySelector(anchor)) {
+    return (
+      <AnchorLink className="px-4 xs:px-2 nav-link" href={anchor}>
+        {children}
+      </AnchorLink>
+    );
+  }
+
+  return (
+    <Link className="px-4 xs:px-2 nav-link" to={path + anchor}>
+      {children}
+    </Link>
+  );
+};
 
 export type HeaderProps = {
   page?: string;
@@ -75,18 +97,18 @@ const Header: FC<HeaderProps> = ({ page = 'index' }) => {
       <div>
         {page === 'index' && (
           <>
-            <AnchorLink className="px-4 xs:px-2 nav-link" href="#about">
+            <SafeScrollLink path="/" anchor="#about">
               ABOUT
-            </AnchorLink>
-            <AnchorLink className="px-4 xs:px-2 nav-link" href="#tracks">
+            </SafeScrollLink>
+            <SafeScrollLink path="/" anchor="#tracks">
               TRACKS
-            </AnchorLink>
-            <AnchorLink className="px-4 xs:px-2 nav-link" href="#faq">
+            </SafeScrollLink>
+            <SafeScrollLink path="/" anchor="#faq">
               FAQ
-            </AnchorLink>
-            <AnchorLink className="px-4 xs:px-2 nav-link" href="#sponsors">
+            </SafeScrollLink>
+            <SafeScrollLink path="/" anchor="#sponsors">
               SPONSORS
-            </AnchorLink>
+            </SafeScrollLink>
           </>
         )}
       </div>
