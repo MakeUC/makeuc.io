@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 import { Link } from 'gatsby';
 import { FC, ReactNode, useEffect, useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
@@ -8,22 +9,6 @@ type SafeScrollLinkProps = {
   path: string;
   anchor: string;
   children: ReactNode;
-};
-
-const SafeScrollLink: FC<SafeScrollLinkProps> = ({ path, anchor, children }) => {
-  if (document.querySelector(anchor)) {
-    return (
-      <AnchorLink className="px-4 xs:px-2 nav-link" href={anchor}>
-        {children}
-      </AnchorLink>
-    );
-  }
-
-  return (
-    <Link className="px-4 xs:px-2 nav-link" to={path + anchor}>
-      {children}
-    </Link>
-  );
 };
 
 export type HeaderProps = {
@@ -97,18 +82,18 @@ const Header: FC<HeaderProps> = ({ page = 'index' }) => {
       <div>
         {page === 'index' && (
           <>
-            <SafeScrollLink path="/" anchor="#about">
+            <AnchorLink className="px-4 xs:px-2 nav-link" href="#about">
               ABOUT
-            </SafeScrollLink>
-            <SafeScrollLink path="/" anchor="#tracks">
+            </AnchorLink>
+            <AnchorLink className="px-4 xs:px-2 nav-link" href="#tracks">
               TRACKS
-            </SafeScrollLink>
-            <SafeScrollLink path="/" anchor="#faq">
+            </AnchorLink>
+            <AnchorLink className="px-4 xs:px-2 nav-link" href="#faq">
               FAQ
-            </SafeScrollLink>
-            <SafeScrollLink path="/" anchor="#sponsors">
+            </AnchorLink>
+            <AnchorLink className="px-4 xs:px-2 nav-link" href="#sponsors">
               SPONSORS
-            </SafeScrollLink>
+            </AnchorLink>
           </>
         )}
       </div>
