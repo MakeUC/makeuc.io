@@ -51,6 +51,17 @@ const workShopRows = [
     'July 28 - 7:00 PM',
     'July 28 - 8:00 PM',
     'Trina L. Martin',
+    <div>
+    <Chip
+      label="Recording"
+      variant="outlined"
+      component="a"
+      style={chipStyle}
+      href="https://drive.google.com/file/d/1Ocf-iie8sxtrDhY983oC2Tn2Mnd1l6S8/view?usp=sharing"
+      target="_blank"
+      clickable
+    />
+  </div>,
   ),
   createData(
     'Intro to Game Development',
@@ -94,11 +105,11 @@ const workShopRows = [
         clickable
       />
       <Chip
-        label="Console"
+        label="Recording"
         variant="outlined"
         component="a"
         style={chipStyle}
-        href="https://console.cloud.google.com"
+        href="https://drive.google.com/file/d/1bMvf39kbdOzIOv0OOgoa6oeD5CC7FlFX/view?usp=sharing"
         target="_blank"
         clickable
       />
