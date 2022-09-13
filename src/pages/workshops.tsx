@@ -51,6 +51,17 @@ const workShopRows = [
     'July 28 - 7:00 PM',
     'July 28 - 8:00 PM',
     'Trina L. Martin',
+    <div>
+    <Chip
+      label="Recording"
+      variant="outlined"
+      component="a"
+      style={chipStyle}
+      href="https://drive.google.com/file/d/1Ocf-iie8sxtrDhY983oC2Tn2Mnd1l6S8/view?usp=sharing"
+      target="_blank"
+      clickable
+    />
+  </div>,
   ),
   createData(
     'Intro to Game Development',
@@ -94,11 +105,11 @@ const workShopRows = [
         clickable
       />
       <Chip
-        label="Console"
+        label="Recording"
         variant="outlined"
         component="a"
         style={chipStyle}
-        href="https://console.cloud.google.com"
+        href="https://drive.google.com/file/d/1bMvf39kbdOzIOv0OOgoa6oeD5CC7FlFX/view?usp=sharing"
         target="_blank"
         clickable
       />
@@ -114,7 +125,7 @@ const WorkshopsPage: FC = () => (
       <main>
         <section id="about" className="py-10 lg:pb-24 lg:pt-24">
           <div className="container mx-auto text-center">
-            <SectionHeader style={{ marginTop: '5rem' }}>UPCOMING WORKSHOPS</SectionHeader>
+            <SectionHeader style={{ marginTop: '5rem' }}>WORKSHOPS</SectionHeader>
             <div className="grid sm:grid-cols-1">
               <div className="mt-12 text-left text-black">
                 <Card className="m-4 bg-white text-center is-centered is-rounded">
