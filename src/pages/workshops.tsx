@@ -125,7 +125,7 @@ const WorkshopsPage: FC = () => (
       <main>
         <section id="about" className="py-10 lg:pb-24 lg:pt-24">
           <div className="container mx-auto text-center">
-            <SectionHeader style={{ marginTop: '5rem' }}>UPCOMING WORKSHOPS</SectionHeader>
+            <SectionHeader style={{ marginTop: '5rem' }}>WORKSHOPS</SectionHeader>
             <div className="grid sm:grid-cols-1">
               <div className="mt-12 text-left text-black">
                 <Card className="m-4 bg-white text-center is-centered is-rounded">
