@@ -226,6 +226,20 @@ module.exports = {
           className: 'partner',
           alt: 'Chipotle',
         },
+        {
+          link: 'https://www.qoom.io/',
+          src: 'qoom.svg',
+          imageHeight: '32px',
+          className: 'partner',
+          alt: 'Qoom',
+        },
+        {
+          link: 'https://certopus.com/',
+          src: 'certopus_logo.png',
+          imageHeight: '32px',
+          className: 'partner',
+          alt: 'Certopus',
+        },
       ],
 
       // XS
