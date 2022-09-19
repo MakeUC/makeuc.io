@@ -233,6 +233,13 @@ module.exports = {
           className: 'partner',
           alt: 'Qoom',
         },
+        {
+          link: 'https://certopus.com/',
+          src: 'certopus_logo.png',
+          imageHeight: '32px',
+          className: 'partner',
+          alt: 'Certopus',
+        },
       ],
 
       // XS
