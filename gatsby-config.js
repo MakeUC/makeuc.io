@@ -240,6 +240,13 @@ module.exports = {
           className: 'partner',
           alt: 'Certopus',
         },
+        {
+          link: 'https://www.elegoo.com/',
+          src: 'ELEGOO.png',
+          imageHeight: '32px',
+          className: 'partner',
+          alt: 'ELEGOO',
+        },
       ],
 
       // XS
