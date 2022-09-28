@@ -14,6 +14,10 @@ export const PageContainer = styled.div`
   font-weight: bold;
   font-size: 12px;
 
+  * {
+    overflow: scroll;
+  }
+
   ${FooterContainer} {
     margin-top: auto;
   }
