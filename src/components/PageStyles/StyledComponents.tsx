@@ -15,7 +15,7 @@ export const PageContainer = styled.div`
   font-size: 12px;
 
   * {
-    overflow: scroll;
+    overflow: auto;
   }
 
   ${FooterContainer} {
