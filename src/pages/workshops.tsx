@@ -92,7 +92,7 @@ const workShopRows = [
   createData(
     'Getting Started with Google Cloud for Hackathons [Google Cloud]',
     'September 8 - 7:00 PM',
-    'October 8 - 9:00 PM',
+    'September 8 - 9:00 PM',
     'Laurie White',
     <div>
       <Chip
