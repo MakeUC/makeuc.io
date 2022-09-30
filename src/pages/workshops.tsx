@@ -115,6 +115,23 @@ const workShopRows = [
       />
     </div>,
   ),
+  createData(
+    'Intro to Web Dev',
+    'October 4 - 7:00 PM',
+    'October 4 - 8:00 PM',
+    'Bao Huynh',
+    <div>
+      <Chip
+        label="Sign up"
+        variant="outlined"
+        component="a"
+        style={chipStyle}
+        href="https://forms.gle/vMRHhGT7fute9zuu6"
+        target="_blank"
+        clickable
+      />
+    </div>,
+  ),
   createData('APIs 101 [Postman]', 'October 19 - 7:00 PM', 'October 19 - 8:30 PM', 'Ruby Sattar'),
 ];
 
