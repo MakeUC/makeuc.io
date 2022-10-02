@@ -155,14 +155,14 @@ module.exports = {
         {
           link: 'https://www.reyrey.com/',
           src: 'reynolds&reynolds.jpg',
-          imageHeight: '112px',
+          imageHeight: '90px',
           className: 'mt-2 partner',
           alt: 'Reynolds and Reynolds',
         },
         {
           link: 'https://tribunal.uc.edu/',
           src: 'tribunal.png',
-          imageHeight: '112px',
+          imageHeight: '85px',
           className: 'mt-2 partner',
           alt: 'CEAS Tribunal',
         },
