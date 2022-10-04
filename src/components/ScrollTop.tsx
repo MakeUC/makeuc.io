@@ -154,8 +154,8 @@ const ScrollTop: FC<ScrollTopProps> = ({
         onClick={() => setIsFlying(true)}
         style={{
           boxShadow: '0px 0px 0px rgba(0,0,0,0.5)',
-          borderRadius: '3px',
-          width: '60px',
+          borderRadius: '5px',
+          width: '70px',
           padding: '10px 15px',
         }}
       >
