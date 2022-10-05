@@ -169,7 +169,7 @@ module.exports = {
         {
           link: 'https://www.crowdstrike.com/',
           src: 'crowdstrike.png',
-          imageHeight: '85px',
+          imageHeight: '90px',
           className: 'mt-2 partner',
           alt: 'CrowdStrike',
         },
