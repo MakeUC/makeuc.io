@@ -166,6 +166,13 @@ module.exports = {
           className: 'mt-2 partner',
           alt: 'CEAS Tribunal',
         },
+        {
+          link: 'https://www.crowdstrike.com/',
+          src: 'crowdstrike.png',
+          imageHeight: '90px',
+          className: 'mt-2 partner',
+          alt: 'CrowdStrike',
+        },
       ],
 
       // S
