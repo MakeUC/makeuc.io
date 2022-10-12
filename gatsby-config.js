@@ -119,6 +119,13 @@ module.exports = {
           className: 'px-4 partner',
           alt: 'Northrop Grumman',
         },
+        {
+          link: 'https://kinetic-vision.com/careers/',
+          src: 'KineticVision.png',
+          imageHeight: '60px',
+          className: 'px-4 partner',
+          alt: 'Kinetic Vision',
+        },
       ],
       [],
 
@@ -169,7 +176,7 @@ module.exports = {
         {
           link: 'https://www.crowdstrike.com/',
           src: 'crowdstrike.png',
-          imageHeight: '85px',
+          imageHeight: '90px',
           className: 'mt-2 partner',
           alt: 'CrowdStrike',
         },
