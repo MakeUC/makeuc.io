@@ -275,6 +275,13 @@ module.exports = {
           className: 'partner',
           alt: 'ELEGOO',
         },
+        {
+          link: 'https://www.almadinagrill.com/',
+          src: 'AlMadina.jpg',
+          imageHeight: '32px',
+          className: 'partner',
+          alt: 'Al Madina',
+        },
       ],
 
       // XS
