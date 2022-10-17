@@ -180,6 +180,13 @@ module.exports = {
           className: 'mt-2 partner',
           alt: 'CrowdStrike',
         },
+                {
+          link: 'https://www.recall.ai/',
+          src: 'recallAI.png',
+          imageHeight: '90px',
+          className: 'mt-2 partner',
+          alt: 'recall.AI',
+        },
       ],
 
       // S
@@ -250,7 +257,7 @@ module.exports = {
         {
           link: 'https://www.chipotle.com/',
           src: 'chipotle.svg',
-          imageHeight: '32px',
+          imageHeight: '40px',
           className: 'partner',
           alt: 'Chipotle',
         },
@@ -264,7 +271,7 @@ module.exports = {
         {
           link: 'https://certopus.com/',
           src: 'certopus_logo.png',
-          imageHeight: '32px',
+          imageHeight: '40px',
           className: 'partner',
           alt: 'Certopus',
         },
@@ -281,6 +288,13 @@ module.exports = {
           imageHeight: '32px',
           className: 'partner',
           alt: 'Al Madina',
+        },
+        {
+          link: 'https://www.mikroe.com/',
+          src: 'mikroe.png',
+          imageHeight: '50px',
+          className: 'partner',
+          alt: 'MIKROE',
         },
       ],
 
