@@ -180,12 +180,19 @@ module.exports = {
           className: 'mt-2 partner',
           alt: 'CrowdStrike',
         },
-                {
+        {
           link: 'https://www.recall.ai/',
           src: 'recallAI.png',
           imageHeight: '90px',
           className: 'mt-2 partner',
           alt: 'recall.AI',
+        },
+        {
+          link: 'https://www.pwc.com/',
+          src: 'pricewaterhousecoopers.png',
+          imageHeight: '90px',
+          className: 'mt-2 partner',
+          alt: 'PWC',
         },
       ],
 
