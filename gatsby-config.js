@@ -257,7 +257,7 @@ module.exports = {
         {
           link: 'https://www.chipotle.com/',
           src: 'chipotle.svg',
-          imageHeight: '32px',
+          imageHeight: '40px',
           className: 'partner',
           alt: 'Chipotle',
         },
@@ -271,7 +271,7 @@ module.exports = {
         {
           link: 'https://certopus.com/',
           src: 'certopus_logo.png',
-          imageHeight: '32px',
+          imageHeight: '40px',
           className: 'partner',
           alt: 'Certopus',
         },
@@ -292,7 +292,7 @@ module.exports = {
         {
           link: 'https://www.mikroe.com/',
           src: 'mikroe.png',
-          imageHeight: '32px',
+          imageHeight: '50px',
           className: 'partner',
           alt: 'MIKROE',
         },
