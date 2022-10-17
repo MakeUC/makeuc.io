@@ -289,6 +289,13 @@ module.exports = {
           className: 'partner',
           alt: 'Al Madina',
         },
+        {
+          link: 'https://www.mikroe.com/',
+          src: 'mikroe.png',
+          imageHeight: '32px',
+          className: 'partner',
+          alt: 'MIKROE',
+        },
       ],
 
       // XS
