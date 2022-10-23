@@ -102,9 +102,9 @@ const IndexPage: FC = () => {
                   <strong>OCTOBER 22-23, 2022</strong>
                 </p>
                 <p className="mt-8 mb-12 md:mt-12">
-                  <Link to="/register">
+                  <Link to="https://makeuc-2022.devpost.com">
                     <Button size="lg" className="font-sans text-md font-bold">
-                      REGISTER
+                      DEVPOST
                     </Button>
                   </Link>
                   <Link to="/workshops" className="pl-4">
